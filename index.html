@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=1200">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>LGM · Luis Gustavo Maia — Engenharia & Construções</title>
 <style>
 
@@ -399,6 +399,91 @@ body {
 /* ── counter card hover ── */
 .sf-counter-card { cursor:default; transition:transform .22s, box-shadow .22s; }
 .sf-counter-card:hover { transform:translateY(-4px); }
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float {
+  position:fixed; bottom:28px; right:28px; z-index:300;
+  display:flex; align-items:center; gap:11px;
+  background:#25D366; color:#fff;
+  padding:14px 22px 14px 18px; border-radius:100px;
+  font-family:var(--B); font-size:15px; font-weight:600;
+  text-decoration:none; letter-spacing:.01em;
+  box-shadow:0 4px 20px rgba(37,211,102,.40), 0 1px 4px rgba(0,0,0,.14);
+  transition:transform .22s, box-shadow .22s;
+}
+.wa-float:hover { transform:translateY(-3px); box-shadow:0 8px 32px rgba(37,211,102,.55), 0 2px 6px rgba(0,0,0,.14); }
+.wa-float svg { width:22px; height:22px; fill:#fff; flex-shrink:0; }
+
+/* ── SIDENAV ACTIVE STATE ── */
+.sidenav-dot.active { background:var(--terra); transform:scale(1.6); }
+
+/* ── LINK CONTACTS ── */
+.contact-link {
+  color:inherit; text-decoration:none;
+  transition:color .2s;
+}
+.contact-link:hover { color:var(--terra); }
+.contact-link-dark {
+  color:inherit; text-decoration:none;
+  transition:color .2s;
+}
+.contact-link-dark:hover { color:#A08060; }
+
+/* ── COVER CTA BUTTON ── */
+.cover-cta {
+  display:inline-flex; align-items:center; gap:12px;
+  margin-top:48px;
+  background:#25D366; color:#fff;
+  padding:16px 28px; border-radius:3px;
+  font-family:var(--D); font-size:clamp(10px,0.9vw,13px);
+  letter-spacing:.22em; text-transform:uppercase;
+  text-decoration:none; font-weight:400;
+  box-shadow:0 4px 20px rgba(37,211,102,.30);
+  transition:background .22s, box-shadow .22s, transform .18s;
+}
+.cover-cta:hover { background:#1ebe5c; box-shadow:0 6px 28px rgba(37,211,102,.45); transform:translateY(-1px); }
+.cover-cta svg { width:18px; height:18px; fill:#fff; flex-shrink:0; }
+
+/* ── RESPONSIVE — MOBILE ── */
+@media (max-width: 900px) {
+  .cover { padding:48px 32px; }
+  .sobre-section { grid-template-columns:1fr; }
+  .sobre-media { display:none; }
+  .sobre-content { padding:40px 32px; }
+  .sobre-creds { grid-template-columns:1fr 1fr 1fr; }
+  .sec-header { grid-template-columns:1fr; gap:16px; margin-bottom:40px; }
+  .servicos-grid { grid-template-columns:1fr; }
+  .sf-counters { grid-template-columns:1fr 1fr; }
+  .sf-comp-grid { grid-template-columns:1fr; }
+  .sf-comp-labels { flex-direction:row; flex-wrap:wrap; border-right:none; border-bottom:1px solid rgba(246,244,240,.06); padding-right:0; padding-bottom:16px; margin-bottom:16px; }
+  .tl-steps { grid-template-columns:1fr; }
+  .projeto-inner { grid-template-columns:1fr; }
+  .projeto-drawing { min-height:240px; }
+  .reel-inner { grid-template-columns:1fr; gap:40px; }
+  .reel-box { max-width:200px; }
+  .form-inner { grid-template-columns:1fr; gap:40px; }
+  .contact-section { grid-template-columns:1fr; gap:40px; padding:64px 32px; }
+  .contact-right { padding-left:0; border-left:none; border-top:1px solid rgba(246,244,240,.07); padding-top:40px; }
+  .calc-body { grid-template-columns:1fr; gap:40px; }
+  .calc-results { grid-template-columns:1fr; }
+  .sf-intro { grid-template-columns:1fr; gap:32px; }
+  .two-panel { grid-template-columns:1fr; }
+  .sidenav { display:none; }
+  .wa-float span { display:none; }
+  .wa-float { padding:14px 16px; }
+}
+@media (max-width: 600px) {
+  .servicos-section { padding:48px 24px; }
+  .sf-section { padding:48px 24px; }
+  .timeline-section { padding:48px 24px; }
+  .form-section { padding:48px 24px; }
+  .sobre-content { padding:32px 24px; }
+  .gantt-wrap { padding:0 24px 48px; }
+  .sobre-creds { grid-template-columns:1fr; }
+  .sf-counters { grid-template-columns:1fr; }
+  .cover { padding:40px 24px; }
+  .orcamento-form { padding:32px 24px; }
+}
 </style>
 </head>
 <body>
@@ -424,6 +509,10 @@ body {
     <div class="cover-rule"></div>
     <div class="cover-name">Luis Gustavo Maia<br>Engenharia &amp; Construções</div>
     <div class="cover-tagline">Do terreno. <em>À chave.</em></div>
+    <a href="https://wa.me/5514991850799?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20um%20orçamento" target="_blank" class="cover-cta">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+      Falar no WhatsApp
+    </a>
   </div>
   <div class="cover-footer">
     <div class="cover-footer-label">CREA–SP 5071068977 · engmaia1996@gmail.com</div>
@@ -1006,15 +1095,15 @@ body {
     <div class="contact-info">
       <div class="contact-row">
         <span class="contact-row-label">WhatsApp</span>
-        <span class="contact-row-val">(14) 99185–0799</span>
+        <a href="https://wa.me/5514991850799" target="_blank" class="contact-row-val contact-link-dark">(14) 99185–0799</a>
       </div>
       <div class="contact-row">
         <span class="contact-row-label">E-mail</span>
-        <span class="contact-row-val">engmaia1996@gmail.com</span>
+        <a href="mailto:engmaia1996@gmail.com" class="contact-row-val contact-link-dark">engmaia1996@gmail.com</a>
       </div>
       <div class="contact-row">
         <span class="contact-row-label">Instagram</span>
-        <span class="contact-row-val">@eng.gustavomaia</span>
+        <a href="https://instagram.com/eng.gustavomaia" target="_blank" class="contact-row-val contact-link-dark">@eng.gustavomaia</a>
       </div>
       <div class="contact-row">
         <span class="contact-row-label">CREA</span>
@@ -1028,6 +1117,12 @@ body {
   </div>
 </section>
 
+
+<!-- ══ WHATSAPP FLOAT ════════════════════════ -->
+<a href="https://wa.me/5514991850799?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20um%20orçamento" target="_blank" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+  <span>Falar no WhatsApp</span>
+</a>
 
 <script>
 // ── Scroll reveal ──
@@ -1123,6 +1218,25 @@ function setProjectView(view) {
   btnTec.style.cssText = 'padding:9px 16px;font-family:var(--D);font-size:9px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s;white-space:nowrap;' + (view === 'tecnologia' ? activeStyle : inactiveStyle);
   btnEfi.style.cssText = 'padding:9px 16px;font-family:var(--D);font-size:9px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,border-color .2s;white-space:nowrap;' + (view === 'eficiente' ? activeStyle : inactiveStyle);
 }
+
+// ── Sidenav active on scroll ──
+(function() {
+  var sectionIds = ['capa','sobre','servicos','sf','timeline','projeto','reel','orcamento','contato'];
+  var dots = document.querySelectorAll('.sidenav-dot');
+  function updateNav() {
+    var scrollY = window.scrollY + window.innerHeight * 0.35;
+    var active = 0;
+    sectionIds.forEach(function(id, i) {
+      var el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) active = i;
+    });
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === active);
+    });
+  }
+  window.addEventListener('scroll', updateNav, { passive:true });
+  updateNav();
+})();
 
 // ── Form submit → WhatsApp ──
 function submitForm(e) {
