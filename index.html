@@ -549,15 +549,15 @@ body {
 <body>
 
 <nav class="sidenav">
-  <a href="#capa"      class="sidenav-dot"></a>
-  <a href="#sobre"     class="sidenav-dot"></a>
-  <a href="#servicos"  class="sidenav-dot"></a>
-  <a href="#sf"        class="sidenav-dot"></a>
-  <a href="#timeline"  class="sidenav-dot"></a>
-  <a href="#projeto"   class="sidenav-dot"></a>
-  <a href="#reel"      class="sidenav-dot"></a>
-  <a href="#orcamento" class="sidenav-dot"></a>
-  <a href="#contato"   class="sidenav-dot"></a>
+  <a href="#capa"      class="sidenav-dot" title="Início"></a>
+  <a href="#sobre"     class="sidenav-dot" title="Sobre"></a>
+  <a href="#servicos"  class="sidenav-dot" title="Serviços"></a>
+  <a href="#sf"        class="sidenav-dot" title="Steel Frame"></a>
+  <a href="#timeline"  class="sidenav-dot" title="Como funciona"></a>
+  <a href="#projetos"  class="sidenav-dot" title="Projetos"></a>
+  <a href="#blog"      class="sidenav-dot" title="Blog"></a>
+  <a href="#orcamento" class="sidenav-dot" title="Orçamento"></a>
+  <a href="#contato"   class="sidenav-dot" title="Contato"></a>
 </nav>
 
 
@@ -578,9 +578,9 @@ body {
     <div class="cover-footer-label">CREA–SP 5071068977 · engmaia1996@gmail.com</div>
     <nav class="cover-nav">
       <a href="#servicos">Serviços</a>
-      <a href="#sf">Steel Frame</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="blog.html">Blog</a>
+      <a href="steelframe.html">Steel Frame</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#blog">Blog</a>
       <a href="#orcamento">Orçamento</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -800,27 +800,43 @@ body {
 </section>
 
 
-<!-- ══ 04 STEEL FRAME ═════════════════════ -->
-<section class="sf-section" id="sf">
-
-  <!-- Hero banner com foto -->
-  <div class="sf-hero">
-    <div class="sf-hero-bg"></div>
-    <div class="sf-hero-overlay"></div>
-    <div class="sf-hero-content reveal">
-      <div class="sf-eyebrow">Sistema Construtivo · Tecnologia</div>
-      <div class="sf-title">LSF — <em>Light</em> Steel Frame</div>
-      <div class="sf-subtitle">
-        Sistema moderno e eficiente: conseguimos vencer grandes vãos com uma estrutura leve, possibilitando assim idealizar um projeto de arquitetura fora da caixa. Sem padrões, sem limitações de planta — a liberdade de criar começa na estrutura.
-      </div>
+<!-- ══ 04 STEEL FRAME TEASER ═══════════════ -->
+<section id="sf" style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;border-bottom:1px solid rgba(246,244,240,.06);">
+  <div style="position:absolute;inset:0;background:url('steel_frame.jpg') center/cover no-repeat;opacity:.28;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,13,13,1) 0%,rgba(13,13,13,.95) 38%,rgba(13,13,13,.5) 65%,rgba(13,13,13,.15) 100%);"></div>
+  <div class="reveal" style="position:relative;z-index:2;padding:clamp(48px,7vw,100px) 80px;display:flex;flex-direction:column;gap:20px;max-width:760px;">
+    <div style="font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--terra);">Sistema Construtivo · Tecnologia</div>
+    <div style="font-family:var(--D);font-size:clamp(36px,4.5vw,68px);font-weight:200;color:var(--paper);line-height:1.05;letter-spacing:.02em;">LSF — <span style="color:var(--terra);">Light</span> Steel Frame</div>
+    <div style="font-size:clamp(15px,1.15vw,18px);color:rgba(246,244,240,.72);line-height:1.85;text-align:justify;max-width:620px;border-top:1px solid rgba(246,244,240,.10);padding-top:22px;">
+      Sistema moderno e eficiente: conseguimos vencer grandes vãos com uma estrutura leve, possibilitando assim idealizar um projeto de arquitetura fora da caixa. Sem padrões, sem limitações de planta — a liberdade de criar começa na estrutura.
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+      <a href="steelframe.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--paper);color:var(--ink);font-family:var(--D);font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:14px 24px;text-decoration:none;transition:background .2s;">Conhecer o sistema completo →</a>
+      <a href="https://wa.me/5514991850799?text=Olá%2C%20quero%20saber%20mais%20sobre%20steel%20frame" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-family:var(--D);font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:14px 24px;text-decoration:none;transition:background .2s;">Falar no WhatsApp</a>
     </div>
   </div>
+  <!-- 4 stats flutuantes no canto direito -->
+  <div style="position:relative;z-index:2;margin-left:auto;padding:clamp(48px,7vw,100px) 80px clamp(48px,7vw,100px) 0;display:grid;grid-template-columns:1fr 1fr;gap:3px;flex-shrink:0;" class="reveal">
+    <div style="background:rgba(13,13,13,.7);border:1px solid rgba(246,244,240,.08);padding:24px 28px;backdrop-filter:blur(4px);">
+      <div style="font-family:var(--D);font-size:clamp(28px,2.8vw,42px);font-weight:200;color:var(--paper);line-height:1;">3<span style="font-size:.5em;color:var(--terra);">×</span></div>
+      <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,244,240,.35);margin-top:8px;">Mais rápido</div>
+    </div>
+    <div style="background:rgba(13,13,13,.7);border:1px solid rgba(246,244,240,.08);padding:24px 28px;backdrop-filter:blur(4px);">
+      <div style="font-family:var(--D);font-size:clamp(28px,2.8vw,42px);font-weight:200;color:var(--paper);line-height:1;">80<span style="font-size:.5em;color:var(--terra);">%</span></div>
+      <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,244,240,.35);margin-top:8px;">Menos resíduo</div>
+    </div>
+    <div style="background:rgba(13,13,13,.7);border:1px solid rgba(246,244,240,.08);padding:24px 28px;backdrop-filter:blur(4px);">
+      <div style="font-family:var(--D);font-size:clamp(28px,2.8vw,42px);font-weight:200;color:var(--paper);line-height:1;">±1<span style="font-size:.5em;color:var(--terra);">mm</span></div>
+      <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,244,240,.35);margin-top:8px;">Precisão estrutural</div>
+    </div>
+    <div style="background:rgba(13,13,13,.7);border:1px solid rgba(246,244,240,.08);padding:24px 28px;backdrop-filter:blur(4px);">
+      <div style="font-family:var(--D);font-size:clamp(28px,2.8vw,42px);font-weight:200;color:var(--paper);line-height:1;">50<span style="font-size:.5em;color:var(--terra);">+</span></div>
+      <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,244,240,.35);margin-top:8px;">Anos de vida útil</div>
+    </div>
+  </div>
+</section>
 
-  <!-- Corpo: vantagens + counters + comparativo -->
-  <div class="sf-body">
-
-  <!-- Vantagens em 3 colunas — diferentes dos counters -->
-  <div class="sf-vantagens reveal">
+<!--
     <div class="sf-vant">
       <div class="sf-vant-icon">10 m</div>
       <div class="sf-vant-title">Vãos livres sem pilares</div>
@@ -963,9 +979,7 @@ body {
     </div>
   </div>
 
-  </div><!-- /sf-body -->
-
-</section>
+-->
 
 
 <!-- ══ TIMELINE ═══════════════════════════ -->
@@ -1015,8 +1029,132 @@ body {
 </section>
 
 
-<!-- ══ 05 PROJETO ═════════════════════════ -->
-<section class="projeto-section" id="projeto">
+<!-- ══ 05 PROJETOS ════════════════════════ -->
+<section style="background:var(--paper);border-bottom:1px solid var(--line);" id="projetos">
+  <div style="padding:clamp(48px,6vw,80px) 80px;">
+    <div class="sec-header reveal">
+      <div class="sec-label">Portfólio</div>
+      <div class="sec-title">Projetos<br>entregues.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;" class="reveal">
+
+      <div style="background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;">
+        <div style="height:160px;background:#0F0F0E;position:relative;display:flex;align-items:center;justify-content:center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6" opacity=".1"><rect x="3" y="3" width="3" height="18"/><rect x="18" y="3" width="3" height="18"/><line x1="6" y1="7" x2="18" y2="7"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+          <div style="position:absolute;top:14px;left:14px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;background:rgba(246,244,240,.08);color:rgba(246,244,240,.5);border:1px solid rgba(246,244,240,.08);">Steel Frame</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;background:rgba(43,122,75,.15);color:#4CAF76;border:1px solid rgba(43,122,75,.25);">Entregue</div>
+        </div>
+        <div style="padding:24px 24px 28px;display:flex;flex-direction:column;gap:8px;flex:1;">
+          <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);">Projeto 01</div>
+          <div style="font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);">Residência Unifamiliar · 120m²</div>
+          <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);">Marília · SP · 2025</div>
+          <div style="display:flex;gap:0;border-top:1px solid var(--line);margin-top:auto;">
+            <div style="flex:1;padding:10px 0;text-align:center;border-right:1px solid var(--line);"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">120m²</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Área</div></div>
+            <div style="flex:1;padding:10px 0;text-align:center;border-right:1px solid var(--line);"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">90 dias</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Prazo</div></div>
+            <div style="flex:1;padding:10px 0;text-align:center;"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">R$ 0</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Desvio</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;">
+        <div style="height:160px;background:#0A0D0E;position:relative;display:flex;align-items:center;justify-content:center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6" opacity=".1"><rect x="2" y="9" width="20" height="13"/><polyline points="2 9 12 2 22 9"/><line x1="8" y1="9" x2="8" y2="22"/><line x1="16" y1="9" x2="16" y2="22"/></svg>
+          <div style="position:absolute;top:14px;left:14px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;background:rgba(246,244,240,.08);color:rgba(246,244,240,.5);border:1px solid rgba(246,244,240,.08);">Galpão</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;background:rgba(43,122,75,.15);color:#4CAF76;border:1px solid rgba(43,122,75,.25);">Entregue</div>
+        </div>
+        <div style="padding:24px 24px 28px;display:flex;flex-direction:column;gap:8px;flex:1;">
+          <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);">Projeto 02</div>
+          <div style="font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);">Galpão Industrial · 300m²</div>
+          <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);">Marília · SP · 2024</div>
+          <div style="display:flex;gap:0;border-top:1px solid var(--line);margin-top:auto;">
+            <div style="flex:1;padding:10px 0;text-align:center;border-right:1px solid var(--line);"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">300m²</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Área</div></div>
+            <div style="flex:1;padding:10px 0;text-align:center;border-right:1px solid var(--line);"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">120 dias</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Prazo</div></div>
+            <div style="flex:1;padding:10px 0;text-align:center;"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">R$ 0</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Desvio</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;">
+        <div style="height:160px;background:#0D0A0E;position:relative;display:flex;align-items:center;justify-content:center;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6" opacity=".1"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/><circle cx="16" cy="17" r="3"/></svg>
+          <div style="position:absolute;top:14px;left:14px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;background:rgba(246,244,244,.08);color:rgba(246,244,240,.5);border:1px solid rgba(246,244,240,.08);">Regularização</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;background:rgba(43,122,75,.15);color:#4CAF76;border:1px solid rgba(43,122,75,.25);">Entregue</div>
+        </div>
+        <div style="padding:24px 24px 28px;display:flex;flex-direction:column;gap:8px;flex:1;">
+          <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);">Projeto 03</div>
+          <div style="font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);">Regularização e Averbação · 200m²</div>
+          <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);">Ourinhos · SP · 2024</div>
+          <div style="display:flex;gap:0;border-top:1px solid var(--line);margin-top:auto;">
+            <div style="flex:1;padding:10px 0;text-align:center;border-right:1px solid var(--line);"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">200m²</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Área</div></div>
+            <div style="flex:1;padding:10px 0;text-align:center;border-right:1px solid var(--line);"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">45 dias</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Prazo</div></div>
+            <div style="flex:1;padding:10px 0;text-align:center;"><div style="font-family:var(--D);font-size:16px;font-weight:300;color:var(--ink);">CND</div><div style="font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;">Resultado</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:24px;">
+      <a href="projetos.html" style="font-family:var(--D);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s;" onmouseover="this.style.color='var(--terra)';this.style.borderColor='var(--terra)'" onmouseout="this.style.color='var(--ink)';this.style.borderColor='var(--ink)'">Ver todos os projetos →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 06 BLOG ════════════════════════════ -->
+<section style="background:var(--white);border-bottom:1px solid var(--line);" id="blog">
+  <div style="padding:clamp(48px,6vw,80px) 80px;">
+    <div class="sec-header reveal">
+      <div class="sec-label">Conteúdo técnico</div>
+      <div class="sec-title">Blog &<br>Notícias.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;" class="reveal">
+
+      <article style="background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:8px;background:var(--terra);width:0;transition:width .35s;position:absolute;bottom:0;left:0;" class="blog-hover-bar"></div>
+        <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);">Steel Frame</div>
+          <div style="font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);line-height:1.25;">Steel Frame: o sistema que está mudando a construção civil no Brasil</div>
+          <div style="font-size:clamp(12px,0.9vw,13px);color:var(--ink3);line-height:1.75;flex:1;">Por que o LSF cresce 40% ao ano — com dados técnicos e comparativos reais com a alvenaria convencional.</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line);">
+            <span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);">Abr 2026</span>
+            <span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);">8 min</span>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);">CNO · INSS</div>
+          <div style="font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);line-height:1.25;">Como reduzir legalmente o INSS da sua obra em até 40%</div>
+          <div style="font-size:clamp(12px,0.9vw,13px);color:var(--ink3);line-height:1.75;flex:1;">Planejamento tributário na construção civil — a diferença entre desoneração e base de cálculo real, e o que fazer antes de começar.</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line);">
+            <span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);">Jan 2026</span>
+            <span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);">8 min</span>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="padding:28px 28px 32px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);">Reforma</div>
+          <div style="font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);line-height:1.25;">5 erros que tornam uma reforma 3× mais cara do que o planejado</div>
+          <div style="font-size:clamp(12px,0.9vw,13px);color:var(--ink3);line-height:1.75;flex:1;">Demolir parede sem saber se é estrutural, ignorar o projeto elétrico, não ter ART — os erros mais comuns e como evitá-los.</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line);">
+            <span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);">Fev 2026</span>
+            <span style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);">6 min</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:24px;">
+      <a href="blog.html" style="font-family:var(--D);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s;" onmouseover="this.style.color='var(--terra)';this.style.borderColor='var(--terra)'" onmouseout="this.style.color='var(--ink)';this.style.borderColor='var(--ink)'">Ver todos os artigos →</a>
+    </div>
+  </div>
+</section>
+
+
+<!--SEÇÕES ANTIGAS REMOVIDAS: #projeto (SVG drawing) + #reel (placeholder)-->
   <div class="projeto-header">
     <span class="projeto-eyebrow">Projeto em destaque · Steel Frame</span>
     <span class="projeto-label">Residência Unifamiliar</span>
@@ -1135,37 +1273,6 @@ body {
 </section>
 
 
-<!-- ══ 06 REEL ════════════════════════════ -->
-<section class="reel-section" id="reel">
-  <div class="reel-inner">
-    <div class="reel-box reveal">
-      <div class="reel-top">
-        <span class="reel-logo">LGM</span>
-        <span class="reel-type">Reel</span>
-      </div>
-      <div class="reel-center">
-        <div class="reel-play"></div>
-        <span class="reel-play-label">Vídeo aqui</span>
-      </div>
-      <div class="reel-bottom">
-        <div class="reel-title">Como funciona o steel frame na prática</div>
-        <div class="reel-sub">LGM · Engenharia</div>
-      </div>
-      <div class="reel-bar"></div>
-    </div>
-    <div class="reel-info reveal reveal-delay-2">
-      <div class="reel-info-tag">Conteúdo em vídeo · Instagram Reels</div>
-      <div class="reel-info-headline">Ver o processo<br>é o que<br>converte.</div>
-      <div class="reel-info-text">Reels curtos mostrando a estrutura sendo montada, o canteiro limpo, o projeto saindo do papel. Para quem pesquisa steel frame, a prova visual vale mais que qualquer argumento.</div>
-      <div class="reel-formats">
-        <div class="rfi"><div class="rfi-label">Formato</div><div class="rfi-val">9:16 · Reel</div></div>
-        <div class="rfi"><div class="rfi-label">Duração</div><div class="rfi-val">30–60s</div></div>
-        <div class="rfi"><div class="rfi-label">Frequência</div><div class="rfi-val">2× / mês</div></div>
-        <div class="rfi"><div class="rfi-label">Tema</div><div class="rfi-val">Processo</div></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ══ ORÇAMENTO ══════════════════════════ -->
@@ -1386,7 +1493,7 @@ function setProjectView(view) {
 
 // ── Sidenav active on scroll ──
 (function() {
-  var sectionIds = ['capa','sobre','servicos','sf','timeline','projeto','reel','orcamento','contato'];
+  var sectionIds = ['capa','sobre','servicos','sf','timeline','projetos','blog','orcamento','contato'];
   var dots = document.querySelectorAll('.sidenav-dot');
   function updateNav() {
     var scrollY = window.scrollY + window.innerHeight * 0.35;
