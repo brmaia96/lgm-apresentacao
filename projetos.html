@@ -3,455 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projetos · LGM Engenharia — Steel Frame, Residências e Galpões</title>
-<meta name="description" content="Portfólio de projetos em steel frame, residências e galpões. ART registrada, CNO e INSS regularizados. Engenheiro Civil Luis Gustavo Maia — CREA–SP.">
-<link rel="canonical" href="https://brmaia96.github.io/lgm-apresentacao/projetos.html">
+<title>§04 · Projetos — LGM Engenharia</title>
+<meta name="description" content="Portfólio de projetos de engenharia e arquitetura — residenciais, comerciais e estruturais em Marília/SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink:    #0D0D0D;
-  --ink2:   #3A3A3A;
-  --ink3:   #888880;
-  --paper:  #F6F4F0;
-  --paper2: #ECEAE5;
-  --white:  #FFFFFF;
-  --terra:  #7A6B5A;
-  --line:   rgba(13,13,13,0.10);
-  --D: 'Gill Sans MT','Gill Sans','Century Gothic',Calibri,sans-serif;
-  --B: 'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0B0B0A; --ink2:#2A2A28; --ink3:#6C6C66;
+  --paper:#F4F1EC; --paper2:#E8E4DC; --terra:#8A6B4A;
+  --D:'Fraunces','Gill Sans MT','Century Gothic',Georgia,serif;
+  --S:'Gill Sans MT','Gill Sans','Century Gothic',Calibri,sans-serif;
+  --B:'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --M:'JetBrains Mono','Menlo','Consolas',monospace;
+  --max:1480px; --pad:clamp(24px,5vw,80px);
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--paper);color:var(--ink);font-family:var(--B);font-size:clamp(14px,1.1vw,16px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--B);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 
-/* ── TOPBAR ── */
-.topbar{position:sticky;top:0;z-index:200;background:rgba(246,244,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 80px;height:64px;}
-.topbar-logo{font-family:var(--D);font-size:22px;font-weight:300;letter-spacing:.14em;color:var(--ink);text-decoration:none;}
-.topbar-nav{display:flex;align-items:center;gap:36px;}
-.topbar-nav a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .2s;}
-.topbar-nav a:hover,.topbar-nav a.active{color:var(--ink);}
-.topbar-cta{background:var(--ink);color:var(--paper);font-family:var(--D);font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:10px 20px;text-decoration:none;transition:background .2s;}
-.topbar-cta:hover{background:var(--terra);}
+.masthead{border-bottom:1px solid var(--ink);background:var(--paper);position:sticky;top:0;z-index:50}
+.mast-rail{display:flex;justify-content:space-between;align-items:center;padding:10px var(--pad);font-family:var(--M);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);border-bottom:1px solid var(--ink2);max-width:var(--max);margin:0 auto}
+.mast-rail .sep{opacity:.4;margin:0 10px}
+.mast-main{display:flex;justify-content:space-between;align-items:center;padding:18px var(--pad);max-width:var(--max);margin:0 auto;gap:40px}
+.mast-logo{font-family:var(--D);font-weight:300;font-size:26px;letter-spacing:-.01em;line-height:1}
+.mast-logo em{font-style:italic;color:var(--terra);font-weight:300}
+.mast-nav{display:flex;gap:28px;font-family:var(--M);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.mast-nav a{position:relative;padding:4px 0;transition:color .3s}
+.mast-nav a:hover,.mast-nav a.active{color:var(--ink)}
+.mast-nav a.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--terra)}
+@media(max-width:860px){.mast-nav{display:none}.mast-rail .hide-sm{display:none}}
 
-/* ── HERO ── */
-.proj-hero{background:var(--ink);padding:80px 80px 64px;border-bottom:1px solid rgba(246,244,240,.06);}
-.proj-hero-label{font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--terra);margin-bottom:20px;}
-.proj-hero-title{font-family:var(--D);font-size:clamp(40px,5vw,72px);font-weight:200;color:var(--paper);line-height:1.05;margin-bottom:20px;}
-.proj-hero-sub{font-size:clamp(14px,1.1vw,16px);color:rgba(246,244,240,.4);max-width:560px;line-height:1.75;}
-.proj-hero-stats{display:grid;grid-template-columns:repeat(4,auto);gap:0;width:fit-content;margin-top:48px;border-top:1px solid rgba(246,244,240,.08);padding-top:40px;}
-.phs{padding-right:48px;border-right:1px solid rgba(246,244,240,.08);margin-right:48px;}
-.phs:last-child{border-right:none;margin-right:0;padding-right:0;}
-.phs-val{font-family:var(--D);font-size:clamp(28px,2.8vw,42px);font-weight:200;color:var(--paper);line-height:1;}
-.phs-val span{font-size:.55em;color:var(--terra);}
-.phs-label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,244,240,.3);margin-top:8px;}
+.hero{position:relative;padding:clamp(60px,12vh,140px) 0 clamp(80px,15vh,180px);background:var(--ink);color:var(--paper);overflow:hidden;border-bottom:1px solid var(--ink2)}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--ink2) 1px,transparent 1px),linear-gradient(90deg,var(--ink2) 1px,transparent 1px);background-size:80px 80px;opacity:.25;pointer-events:none}
+.hero-inner{position:relative;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.hero-top{display:flex;justify-content:space-between;font-family:var(--M);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#9A9A94;margin-bottom:80px}
+.hero-top .tag{border:1px solid #3A3A37;padding:6px 12px;border-radius:2px}
+.hero-display{font-family:var(--S);font-weight:200;font-size:clamp(72px,14vw,220px);line-height:.88;letter-spacing:-.035em;color:var(--paper)}
+.hero-display em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.hero-lede{margin-top:48px;max-width:700px;font-family:var(--D);font-weight:300;font-style:italic;font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#C8C4BC}
+.hero-inner::after{content:'';position:absolute;inset:clamp(20px,5vh,60px) var(--pad);pointer-events:none;
+  background:
+    linear-gradient(var(--terra),var(--terra)) left top/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left top/1px 18px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right top/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right top/1px 18px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left bottom/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left bottom/1px 18px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right bottom/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right bottom/1px 18px no-repeat}
 
-/* ── FILTROS ── */
-.filter-bar{padding:28px 80px;background:var(--white);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.filter-btn{font-family:var(--D);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:8px 18px;border:1px solid var(--line);background:transparent;color:var(--ink3);cursor:pointer;transition:all .2s;}
-.filter-btn:hover{border-color:var(--ink);color:var(--ink);}
-.filter-btn.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.sec{padding:clamp(80px,12vh,160px) 0;border-bottom:1px solid var(--paper2)}
+.sec-head{display:grid;grid-template-columns:140px 1fr;gap:40px;margin-bottom:80px;align-items:start}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:16px}}
+.sec-num{font-family:var(--M);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);padding-top:12px}
+.sec-title{font-family:var(--S);font-weight:200;font-size:clamp(40px,6vw,76px);line-height:.98;letter-spacing:-.02em}
+.sec-title em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.sec-sub{margin-top:20px;font-family:var(--D);font-weight:300;font-style:italic;font-size:clamp(17px,2vw,22px);line-height:1.45;color:var(--ink2);max-width:700px}
 
-/* ── PROJETO DESTAQUE ── */
-.proj-featured{display:grid;grid-template-columns:1fr 360px;border-bottom:1px solid var(--line);background:var(--white);min-height:420px;}
-.prf-visual{background:var(--ink);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;}
-.prf-bg{position:absolute;inset:0;background:url('steel_frame.jpg') center/cover no-repeat;opacity:.25;}
-.prf-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.9) 0%,rgba(13,13,13,.2) 60%,transparent 100%);}
-.prf-badge{position:relative;z-index:1;display:inline-flex;align-items:center;background:var(--terra);color:#fff;font-size:9px;letter-spacing:.22em;text-transform:uppercase;padding:6px 14px;margin-bottom:16px;width:fit-content;}
-.prf-title{position:relative;z-index:1;font-family:var(--D);font-size:clamp(22px,2vw,32px);font-weight:300;color:var(--paper);line-height:1.2;}
-.prf-location{position:relative;z-index:1;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,244,240,.35);margin-top:8px;}
-.prf-info{padding:44px;display:flex;flex-direction:column;justify-content:space-between;}
-.prf-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;}
-.prf-specs{list-style:none;display:flex;flex-direction:column;gap:0;}
-.prf-spec{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);font-size:clamp(11px,0.9vw,13px);}
-.prf-spec:last-child{border-bottom:none;}
-.prf-spec-k{color:var(--ink3);}
-.prf-spec-v{color:var(--ink);font-weight:600;}
-.prf-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--D);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s;width:fit-content;margin-top:24px;}
-.prf-cta:hover{color:var(--terra);border-color:var(--terra);}
+/* FILTER TABS */
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:50px;border-bottom:1px solid var(--ink);padding-bottom:20px}
+.filter button{background:transparent;border:none;cursor:pointer;padding:10px 18px;font-family:var(--M);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);border:1px solid transparent;transition:all .3s}
+.filter button:hover{color:var(--ink)}
+.filter button.active{color:var(--ink);border-color:var(--ink)}
+.filter button .count{color:var(--terra);margin-left:6px}
 
-/* ── GRID DE PROJETOS ── */
-.projs-section{padding:64px 80px;}
-.projs-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;}
-.projs-heading{font-family:var(--D);font-size:clamp(18px,1.6vw,24px);font-weight:300;color:var(--ink);}
-.projs-count{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);}
-.projs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+/* PROJECT INDEX — editorial rows */
+.prj-list{border-top:1px solid var(--ink)}
+.prj-row{display:grid;grid-template-columns:60px 1.4fr 1fr 140px 140px;gap:30px;padding:34px 20px;border-bottom:1px solid var(--paper2);align-items:baseline;position:relative;overflow:hidden;cursor:pointer;transition:color .6s}
+@media(max-width:1000px){.prj-row{grid-template-columns:40px 1fr;gap:16px}.prj-row .hide-md{display:none}}
+.prj-row::before{content:'';position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.22,1,.36,1);z-index:0}
+.prj-row:hover{color:var(--paper)}
+.prj-row:hover::before{transform:scaleX(1)}
+.prj-row > *{position:relative;z-index:1}
+.prj-num{font-family:var(--M);font-size:11px;letter-spacing:.2em;color:var(--terra)}
+.prj-name{font-family:var(--S);font-weight:300;font-size:clamp(22px,2.2vw,30px);line-height:1.1;letter-spacing:-.01em}
+.prj-name em{font-family:var(--D);font-style:italic;color:var(--terra)}
+.prj-tag{font-family:var(--D);font-weight:300;font-style:italic;font-size:17px;color:var(--ink3)}
+.prj-row:hover .prj-tag{color:#B4AFA5}
+.prj-meta{font-family:var(--M);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.prj-row:hover .prj-meta{color:#9A9A94}
+.prj-arrow{font-family:var(--D);font-style:italic;font-size:22px;color:var(--terra);text-align:right;opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .3s}
+.prj-row:hover .prj-arrow{opacity:1;transform:none}
 
-.proj-card{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column;cursor:pointer;transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden;}
-.proj-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.10);}
-.proj-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--terra);transition:width .35s ease;}
-.proj-card:hover::after{width:100%;}
+/* STATS BAR */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--paper2);border:1px solid var(--paper2);margin-top:60px}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--paper);padding:40px 30px;border-top:2px solid var(--terra)}
+.stat-num{font-family:var(--S);font-weight:200;font-size:56px;line-height:1;letter-spacing:-.02em}
+.stat-num em{font-family:var(--D);font-style:italic;color:var(--terra)}
+.stat-lbl{font-family:var(--M);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:16px}
 
-/* thumbnails geométricos por tipo */
-.pc-visual{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.pc-visual.sf   { background:#0F0F0E; }
-.pc-visual.galp { background:#0A0D0E; }
-.pc-visual.ref  { background:#0E0B08; }
-.pc-visual.reg  { background:#0D0A0E; }
-.pc-vis-svg{opacity:.12;}
-.pc-status{position:absolute;top:16px;right:16px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px;}
-.pc-status.entregue{background:rgba(43,122,75,.15);color:#4CAF76;border:1px solid rgba(43,122,75,.25);}
-.pc-status.andamento{background:rgba(122,107,90,.12);color:var(--terra);border:1px solid rgba(122,107,90,.2);}
-.pc-type-badge{position:absolute;top:16px;left:16px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;background:rgba(246,244,240,.08);color:rgba(246,244,240,.5);border:1px solid rgba(246,244,240,.08);}
+.cta-section{padding:clamp(80px,12vh,140px) 0;background:var(--ink);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--ink2) 1px,transparent 1px),linear-gradient(90deg,var(--ink2) 1px,transparent 1px);background-size:80px 80px;opacity:.2}
+.cta-section .wrap{position:relative}
+.cta-tag{font-family:var(--M);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:30px}
+.cta-title{font-family:var(--S);font-weight:200;font-size:clamp(40px,6vw,80px);line-height:.98;letter-spacing:-.02em;margin-bottom:40px}
+.cta-title em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.cta-btn{display:inline-flex;align-items:center;gap:14px;padding:18px 34px;border:1px solid var(--paper);font-family:var(--M);font-size:11px;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s}
+.cta-btn::after{content:'→';font-family:var(--D);font-size:16px;transition:transform .3s}
+.cta-btn:hover{background:var(--paper);color:var(--ink)}
+.cta-btn:hover::after{transform:translateX(6px)}
 
-.pc-body{padding:28px 28px 32px;display:flex;flex-direction:column;gap:10px;flex:1;}
-.pc-num{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--terra);}
-.pc-title{font-family:var(--D);font-size:clamp(16px,1.4vw,20px);font-weight:300;color:var(--ink);line-height:1.25;}
-.pc-location{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);}
-.pc-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;}
-.pc-chip{font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--line);color:var(--ink3);}
-.pc-specs-row{display:flex;gap:0;border-top:1px solid var(--line);margin-top:auto;}
-.pc-spec{flex:1;padding:12px 0;text-align:center;border-right:1px solid var(--line);}
-.pc-spec:last-child{border-right:none;}
-.pc-spec-v{font-family:var(--D);font-size:clamp(14px,1.2vw,17px);font-weight:300;color:var(--ink);line-height:1;}
-.pc-spec-k{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-top:4px;}
+.colophon{padding:60px var(--pad) 40px;background:var(--ink);color:#9A9A94;border-top:1px solid var(--ink2)}
+.col-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+@media(max-width:860px){.col-inner{grid-template-columns:1fr}}
+.col-logo{font-family:var(--D);font-weight:300;font-size:22px;color:var(--paper);margin-bottom:8px}
+.col-logo em{font-style:italic;color:var(--terra)}
+.col-meta{font-family:var(--M);font-size:10px;letter-spacing:.16em;text-transform:uppercase;line-height:1.9}
+.col-rom{font-family:var(--D);font-style:italic;font-size:14px;color:var(--ink3);text-align:right}
+@media(max-width:860px){.col-rom{text-align:left}}
 
-/* ── CTA ── */
-.cta-section{background:var(--ink);padding:80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-top:1px solid rgba(246,244,240,.06);}
-.cta-label{font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;}
-.cta-title{font-family:var(--D);font-size:clamp(28px,3vw,48px);font-weight:200;color:var(--paper);line-height:1.1;}
-.cta-desc{font-size:clamp(13px,1vw,15px);color:rgba(246,244,240,.4);line-height:1.8;margin-top:20px;text-align:justify;}
-.cta-btns{display:flex;flex-direction:column;gap:12px;justify-content:center;}
-.cta-btn-wa{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;padding:18px 28px;font-family:var(--D);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background .2s;width:fit-content;}
-.cta-btn-wa:hover{background:#1ebe5c;}
-.cta-btn-orc{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(246,244,240,.5);border:1px solid rgba(246,244,240,.12);padding:18px 28px;font-family:var(--D);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:all .2s;width:fit-content;}
-.cta-btn-orc:hover{border-color:var(--terra);color:var(--terra);}
+.wa-float{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:var(--ink);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--M);font-size:18px;z-index:90;border:1px solid var(--paper);transition:background .3s,transform .3s}
+.wa-float:hover{background:var(--terra);transform:scale(1.08)}
 
-/* ── FOOTER ── */
-.footer{background:var(--paper2);padding:32px 80px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);}
-.footer-logo{font-family:var(--D);font-size:16px;letter-spacing:.14em;color:var(--ink);}
-.footer-copy{font-size:10px;letter-spacing:.1em;color:var(--ink3);}
-.footer-links{display:flex;gap:24px;}
-.footer-links a{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--terra);}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.04s}.d2{transition-delay:.08s}.d3{transition-delay:.12s}.d4{transition-delay:.16s}.d5{transition-delay:.2s}.d6{transition-delay:.24s}.d7{transition-delay:.28s}.d8{transition-delay:.32s}
 
-/* ── WA FLOAT ── */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:300;display:flex;align-items:center;gap:11px;background:#25D366;color:#fff;padding:14px 22px 14px 18px;border-radius:100px;font-family:var(--B);font-size:15px;font-weight:600;text-decoration:none;letter-spacing:.01em;box-shadow:0 4px 20px rgba(37,211,102,.40);transition:transform .22s,box-shadow .22s;}
-.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(37,211,102,.55);}
-.wa-float svg{width:22px;height:22px;fill:#fff;flex-shrink:0;}
-
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  .topbar{padding:0 24px;}
-  .topbar-nav{display:none;}
-  .proj-hero{padding:48px 24px;}
-  .proj-hero-stats{grid-template-columns:1fr 1fr;gap:24px;}
-  .phs{padding-right:0;border-right:none;margin-right:0;}
-  .filter-bar{padding:20px 24px;}
-  .proj-featured{grid-template-columns:1fr;}
-  .projs-section{padding:40px 24px;}
-  .projs-grid{grid-template-columns:1fr;}
-  .cta-section{grid-template-columns:1fr;padding:48px 24px;gap:40px;}
-  .footer{padding:24px;flex-direction:column;gap:16px;text-align:center;}
-  .wa-float span{display:none;}
-  .wa-float{padding:14px 16px;}
-}
-@media(max-width:600px){
-  .projs-grid{grid-template-columns:1fr;}
-}
+.hidden{display:none !important}
 </style>
 </head>
 <body>
 
-<!-- ══ TOPBAR ══════════════════════════════ -->
-<header class="topbar">
-  <a href="index.html" class="topbar-logo">LGM</a>
-  <nav class="topbar-nav">
-    <a href="index.html">Início</a>
-    <a href="index.html#servicos">Serviços</a>
-    <a href="projetos.html" class="active">Projetos</a>
-    <a href="blog.html">Blog</a>
-    <a href="index.html#contato">Contato</a>
-  </nav>
-  <a href="https://wa.me/5514991850799?text=Olá%2C%20vim%20pelos%20projetos%20e%20quero%20um%20orçamento" target="_blank" class="topbar-cta">Orçamento</a>
+<header class="masthead">
+  <div class="mast-rail">
+    <div><span>Nº 04 · MMXXVI</span><span class="sep">·</span><span class="hide-sm">22°12′S 49°56′W · MARÍLIA/SP</span></div>
+    <div><span class="hide-sm">CREA-SP 5071068977</span><span class="sep hide-sm">·</span><span>§04 · PROJETOS</span></div>
+  </div>
+  <div class="mast-main">
+    <a href="index.html" class="mast-logo">LGM <em>Engenharia</em></a>
+    <nav class="mast-nav">
+      <a href="index.html">§00</a>
+      <a href="sobre.html">§01</a>
+      <a href="servicos.html">§02</a>
+      <a href="steelframe.html">§03</a>
+      <a href="projetos.html" class="active">§04</a>
+      <a href="blog.html">§05</a>
+      <a href="orcamento.html">§06</a>
+    </nav>
+  </div>
 </header>
 
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="tag">Fig. 04 · Portfólio</div>
+      <div>Início › §04</div>
+    </div>
+    <h1 class="hero-display">Projetos<br><em>&amp; obras.</em></h1>
+    <p class="hero-lede">— Um catálogo em construção. Cada entrada é um trabalho entregue — residência, ampliação, estrutura, consultoria — com sua ficha técnica.</p>
+  </div>
+</section>
 
-<!-- ══ HERO ════════════════════════════════ -->
-<section class="proj-hero">
-  <div class="proj-hero-label">Portfólio · LGM Engenharia</div>
-  <div class="proj-hero-title">Projetos<br>entregues.</div>
-  <div class="proj-hero-sub">Residências, galpões e comerciais em todo o Brasil — cada um com ART registrada, CNO e INSS de obra regularizados. Do projeto à chave, sem terceirizar a responsabilidade técnica.</div>
-  <div class="proj-hero-stats">
-    <div class="phs">
-      <div class="phs-val">70<span>+</span></div>
-      <div class="phs-label">Projetos entregues</div>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num reveal">§04.1 · Índice</div>
+      <div>
+        <h2 class="sec-title reveal d1">Catálogo <em>de obras.</em></h2>
+        <p class="sec-sub reveal d2">Selecione a categoria para filtrar. Cada projeto traz ano, local e tipologia — fichas detalhadas sob consulta.</p>
+      </div>
     </div>
-    <div class="phs">
-      <div class="phs-val">8<span>+</span></div>
-      <div class="phs-label">Anos de experiência</div>
+
+    <div class="filter reveal d1">
+      <button class="active" data-f="all">Todos <span class="count">08</span></button>
+      <button data-f="resid">Residencial <span class="count">04</span></button>
+      <button data-f="steel">Steel Frame <span class="count">02</span></button>
+      <button data-f="estrut">Estrutural <span class="count">01</span></button>
+      <button data-f="reform">Reforma <span class="count">01</span></button>
     </div>
-    <div class="phs">
-      <div class="phs-val">100<span>%</span></div>
-      <div class="phs-label">Com ART registrada</div>
+
+    <div class="prj-list">
+      <a href="#" class="prj-row reveal d1" data-cat="resid" onclick="return false;">
+        <div class="prj-num">I.</div>
+        <div class="prj-name">Residência <em>Serra Azul</em></div>
+        <div class="prj-tag hide-md">— Casa térrea, 220 m²</div>
+        <div class="prj-meta hide-md">Marília/SP<br>2025</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d2" data-cat="steel resid" onclick="return false;">
+        <div class="prj-num">II.</div>
+        <div class="prj-name">Casa <em>Horizonte</em></div>
+        <div class="prj-tag hide-md">— Steel frame, 145 m²</div>
+        <div class="prj-meta hide-md">Marília/SP<br>2024</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d3" data-cat="estrut" onclick="return false;">
+        <div class="prj-num">III.</div>
+        <div class="prj-name">Galpão <em>industrial</em></div>
+        <div class="prj-tag hide-md">— Cálculo estrutural, 800 m²</div>
+        <div class="prj-meta hide-md">Garça/SP<br>2024</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d4" data-cat="resid" onclick="return false;">
+        <div class="prj-num">IV.</div>
+        <div class="prj-name">Residência <em>Pérola</em></div>
+        <div class="prj-tag hide-md">— Sobrado, 310 m²</div>
+        <div class="prj-meta hide-md">Marília/SP<br>2023</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d5" data-cat="reform" onclick="return false;">
+        <div class="prj-num">V.</div>
+        <div class="prj-name">Reforma <em>Centro</em></div>
+        <div class="prj-tag hide-md">— Comercial + residencial</div>
+        <div class="prj-meta hide-md">Marília/SP<br>2023</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d6" data-cat="steel resid" onclick="return false;">
+        <div class="prj-num">VI.</div>
+        <div class="prj-name">Casa <em>Alvorada</em></div>
+        <div class="prj-tag hide-md">— Steel frame, 98 m²</div>
+        <div class="prj-meta hide-md">Pompeia/SP<br>2023</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d7" data-cat="resid" onclick="return false;">
+        <div class="prj-num">VII.</div>
+        <div class="prj-name">Residência <em>Jardim Europa</em></div>
+        <div class="prj-tag hide-md">— Casa térrea, 180 m²</div>
+        <div class="prj-meta hide-md">Marília/SP<br>2022</div>
+        <div class="prj-arrow">→</div>
+      </a>
+      <a href="#" class="prj-row reveal d8" data-cat="resid" onclick="return false;">
+        <div class="prj-num">VIII.</div>
+        <div class="prj-name">Ampliação <em>Vila Nova</em></div>
+        <div class="prj-tag hide-md">— Anexo, 64 m²</div>
+        <div class="prj-meta hide-md">Marília/SP<br>2022</div>
+        <div class="prj-arrow">→</div>
+      </a>
     </div>
-    <div class="phs">
-      <div class="phs-val">0</div>
-      <div class="phs-label">Desvio de prazo</div>
+
+    <div class="stats">
+      <div class="stat reveal d1"><div class="stat-num">08<em>+</em></div><div class="stat-lbl">Anos de atuação</div></div>
+      <div class="stat reveal d2"><div class="stat-num">70<em>+</em></div><div class="stat-lbl">Projetos entregues</div></div>
+      <div class="stat reveal d3"><div class="stat-num">12<em>mil</em></div><div class="stat-lbl">m² calculados</div></div>
+      <div class="stat reveal d4"><div class="stat-num">100<em>%</em></div><div class="stat-lbl">No prazo</div></div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ FILTROS ══════════════════════════════ -->
-<div class="filter-bar">
-  <button class="filter-btn active" onclick="filterProjs('todos',this)">Todos</button>
-  <button class="filter-btn" onclick="filterProjs('sf',this)">Steel Frame</button>
-  <button class="filter-btn" onclick="filterProjs('galp',this)">Galpão</button>
-  <button class="filter-btn" onclick="filterProjs('ref',this)">Reforma</button>
-  <button class="filter-btn" onclick="filterProjs('reg',this)">Regularização</button>
-</div>
-
-
-<!-- ══ PROJETO EM DESTAQUE ══════════════════ -->
-<article class="proj-featured reveal" data-cat="sf">
-  <div class="prf-visual">
-    <div class="prf-bg"></div>
-    <div class="prf-overlay"></div>
-    <div class="prf-badge">Destaque</div>
-    <div class="prf-title">Residência Unifamiliar<br>em Steel Frame — 120m²</div>
-    <div class="prf-location">Marília · SP · 2025</div>
-  </div>
-  <div class="prf-info">
-    <div>
-      <div class="prf-label">Especificações técnicas</div>
-      <ul class="prf-specs">
-        <li class="prf-spec"><span class="prf-spec-k">Sistema</span><span class="prf-spec-v">Steel Frame LSF</span></li>
-        <li class="prf-spec"><span class="prf-spec-k">Área construída</span><span class="prf-spec-v">120 m²</span></li>
-        <li class="prf-spec"><span class="prf-spec-k">Prazo de execução</span><span class="prf-spec-v">90 dias</span></li>
-        <li class="prf-spec"><span class="prf-spec-k">ART</span><span class="prf-spec-v">CREA–SP 5071068977</span></li>
-        <li class="prf-spec"><span class="prf-spec-k">INSS de obra</span><span class="prf-spec-v">Regularizado</span></li>
-        <li class="prf-spec"><span class="prf-spec-k">Desvio de prazo</span><span class="prf-spec-v">Zero</span></li>
-      </ul>
-    </div>
-    <a href="https://wa.me/5514991850799?text=Olá%2C%20vi%20o%20projeto%20residencial%20e%20quero%20saber%20mais" target="_blank" class="prf-cta">Falar sobre este projeto →</a>
-  </div>
-</article>
-
-
-<!-- ══ GRID DE PROJETOS ══════════════════════ -->
-<section class="projs-section">
-  <div class="projs-header">
-    <div class="projs-heading">Todos os projetos</div>
-    <div class="projs-count" id="projsCount">6 projetos</div>
-  </div>
-  <div class="projs-grid" id="projsGrid">
-
-    <!-- SF 01 -->
-    <article class="proj-card reveal" data-cat="sf">
-      <div class="pc-visual sf">
-        <svg class="pc-vis-svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6">
-          <rect x="3" y="3" width="3" height="18"/><rect x="18" y="3" width="3" height="18"/>
-          <line x1="6" y1="7" x2="18" y2="7"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="6" y1="17" x2="18" y2="17"/>
-        </svg>
-        <div class="pc-type-badge">Steel Frame</div>
-        <div class="pc-status entregue">Entregue</div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-num">Projeto 01</div>
-        <div class="pc-title">Residência Unifamiliar — 80m²</div>
-        <div class="pc-location">Bauru · SP · 2025</div>
-        <div class="pc-chips">
-          <span class="pc-chip">Steel Frame</span><span class="pc-chip">ART</span><span class="pc-chip">CNO</span>
-        </div>
-        <div class="pc-specs-row">
-          <div class="pc-spec"><div class="pc-spec-v">80m²</div><div class="pc-spec-k">Área</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">75 dias</div><div class="pc-spec-k">Prazo</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">R$0</div><div class="pc-spec-k">Desvio</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Galpão 01 -->
-    <article class="proj-card reveal" data-cat="galp">
-      <div class="pc-visual galp">
-        <svg class="pc-vis-svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6">
-          <rect x="2" y="9" width="20" height="13"/><polyline points="2 9 12 2 22 9"/>
-          <line x1="8" y1="9" x2="8" y2="22"/><line x1="16" y1="9" x2="16" y2="22"/>
-        </svg>
-        <div class="pc-type-badge">Galpão</div>
-        <div class="pc-status entregue">Entregue</div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-num">Projeto 02</div>
-        <div class="pc-title">Galpão Industrial — 300m²</div>
-        <div class="pc-location">Marília · SP · 2024</div>
-        <div class="pc-chips">
-          <span class="pc-chip">Metálico</span><span class="pc-chip">ART</span><span class="pc-chip">Fundação</span>
-        </div>
-        <div class="pc-specs-row">
-          <div class="pc-spec"><div class="pc-spec-v">300m²</div><div class="pc-spec-k">Área</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">120 dias</div><div class="pc-spec-k">Prazo</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">R$0</div><div class="pc-spec-k">Desvio</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- SF 02 -->
-    <article class="proj-card reveal" data-cat="sf">
-      <div class="pc-visual sf">
-        <svg class="pc-vis-svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6">
-          <polyline points="3 10 12 3 21 10"/><rect x="5" y="10" width="14" height="11"/>
-          <rect x="9" y="14" width="3" height="7"/><rect x="14" y="13" width="4" height="4"/>
-        </svg>
-        <div class="pc-type-badge">Steel Frame</div>
-        <div class="pc-status entregue">Entregue</div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-num">Projeto 03</div>
-        <div class="pc-title">Residência com Cobertura Plana — 150m²</div>
-        <div class="pc-location">São Paulo · SP · 2024</div>
-        <div class="pc-chips">
-          <span class="pc-chip">Steel Frame</span><span class="pc-chip">ART</span><span class="pc-chip">INSS</span>
-        </div>
-        <div class="pc-specs-row">
-          <div class="pc-spec"><div class="pc-spec-v">150m²</div><div class="pc-spec-k">Área</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">100 dias</div><div class="pc-spec-k">Prazo</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">R$0</div><div class="pc-spec-k">Desvio</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Regularização 01 -->
-    <article class="proj-card reveal" data-cat="reg">
-      <div class="pc-visual reg">
-        <svg class="pc-vis-svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6">
-          <rect x="4" y="2" width="16" height="20" rx="1"/>
-          <line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/>
-          <line x1="8" y1="15" x2="12" y2="15"/>
-          <circle cx="16" cy="17" r="3"/>
-        </svg>
-        <div class="pc-type-badge">Regularização</div>
-        <div class="pc-status entregue">Entregue</div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-num">Projeto 04</div>
-        <div class="pc-title">Regularização e Averbação — Construção sem projeto</div>
-        <div class="pc-location">Ourinhos · SP · 2024</div>
-        <div class="pc-chips">
-          <span class="pc-chip">Regularização</span><span class="pc-chip">Prefeitura</span><span class="pc-chip">Cartório</span>
-        </div>
-        <div class="pc-specs-row">
-          <div class="pc-spec"><div class="pc-spec-v">200m²</div><div class="pc-spec-k">Área</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">45 dias</div><div class="pc-spec-k">Prazo</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">CND</div><div class="pc-spec-k">Resultado</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Reforma 01 -->
-    <article class="proj-card reveal" data-cat="ref">
-      <div class="pc-visual ref">
-        <svg class="pc-vis-svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6">
-          <path d="M12 2C7 2 4 6 4 10h16c0-4-3-8-8-8z"/>
-          <line x1="2" y1="14" x2="22" y2="14"/><rect x="4" y="10" width="16" height="4"/>
-        </svg>
-        <div class="pc-type-badge">Reforma</div>
-        <div class="pc-status entregue">Entregue</div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-num">Projeto 05</div>
-        <div class="pc-title">Reforma Residencial com demolição estrutural</div>
-        <div class="pc-location">Marília · SP · 2025</div>
-        <div class="pc-chips">
-          <span class="pc-chip">Reforma</span><span class="pc-chip">ART</span><span class="pc-chip">Laudo</span>
-        </div>
-        <div class="pc-specs-row">
-          <div class="pc-spec"><div class="pc-spec-v">90m²</div><div class="pc-spec-k">Área</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">60 dias</div><div class="pc-spec-k">Prazo</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">R$0</div><div class="pc-spec-k">Desvio</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Galpão 02 -->
-    <article class="proj-card reveal" data-cat="galp">
-      <div class="pc-visual galp">
-        <svg class="pc-vis-svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#F6F4F0" stroke-width=".6">
-          <rect x="2" y="9" width="20" height="13"/><polyline points="2 9 12 2 22 9"/>
-          <line x1="8" y1="9" x2="8" y2="22"/><line x1="16" y1="9" x2="16" y2="22"/>
-          <line x1="2" y1="15" x2="22" y2="15"/>
-        </svg>
-        <div class="pc-type-badge">Galpão</div>
-        <div class="pc-status andamento">Em andamento</div>
-      </div>
-      <div class="pc-body">
-        <div class="pc-num">Projeto 06</div>
-        <div class="pc-title">Galpão Comercial com Mezanino — 480m²</div>
-        <div class="pc-location">Assis · SP · 2026</div>
-        <div class="pc-chips">
-          <span class="pc-chip">Metálico</span><span class="pc-chip">ART</span><span class="pc-chip">CNO</span>
-        </div>
-        <div class="pc-specs-row">
-          <div class="pc-spec"><div class="pc-spec-v">480m²</div><div class="pc-spec-k">Área</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">150 dias</div><div class="pc-spec-k">Prazo</div></div>
-          <div class="pc-spec"><div class="pc-spec-v">2026</div><div class="pc-spec-k">Entrega</div></div>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- ══ CTA ═════════════════════════════════ -->
 <section class="cta-section">
-  <div>
-    <div class="cta-label">Próximo projeto</div>
-    <div class="cta-title">Vamos construir<br>o seu?</div>
-    <div class="cta-desc">Análise inicial gratuita. Me conta o projeto — terreno, área, sistema construtivo, prazo — e eu apresento um caminho técnico claro, com orçamento detalhado por etapa.</div>
-  </div>
-  <div class="cta-btns">
-    <a href="https://wa.me/5514991850799?text=Olá%2C%20vi%20os%20projetos%20e%20quero%20discutir%20o%20meu" target="_blank" class="cta-btn-wa">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-      Falar no WhatsApp
-    </a>
-    <a href="index.html#orcamento" class="cta-btn-orc">Formulário de orçamento →</a>
+  <div class="wrap">
+    <div class="cta-tag reveal">§04 · próximo capítulo</div>
+    <h2 class="cta-title reveal d1">Seu projeto <em>aqui.</em></h2>
+    <a href="orcamento.html" class="cta-btn reveal d2">Iniciar briefing</a>
   </div>
 </section>
 
-
-<!-- ══ FOOTER ════════════════════════════════ -->
-<footer class="footer">
-  <div class="footer-logo">LGM</div>
-  <div class="footer-copy">© 2026 Luis Gustavo Maia · CREA–SP 5071068977 · Marília–SP</div>
-  <div class="footer-links">
-    <a href="index.html">Início</a>
-    <a href="blog.html">Blog</a>
-    <a href="index.html#orcamento">Orçamento</a>
-    <a href="https://instagram.com/eng.gustavomaia" target="_blank">Instagram</a>
+<footer class="colophon">
+  <div class="col-inner">
+    <div>
+      <div class="col-logo">LGM <em>Engenharia</em></div>
+      <div class="col-meta">
+        Luis Gustavo Maia · CREA-SP 5071068977<br>
+        Marília/SP · (14) 99185-0799 · engmaia1996@gmail.com
+      </div>
+    </div>
+    <div class="col-rom">— Colophon · MMXXVI</div>
   </div>
 </footer>
 
-
-<!-- ══ WA FLOAT ════════════════════════════ -->
-<a href="https://wa.me/5514991850799?text=Olá%2C%20vim%20pelos%20projetos%20e%20quero%20um%20orçamento" target="_blank" class="wa-float">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-  <span>Falar no WhatsApp</span>
-</a>
-
+<a href="https://wa.me/5514991850799" target="_blank" class="wa-float" aria-label="WhatsApp">✉</a>
 
 <script>
-var ro = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+  const io = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-function filterProjs(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-  btn.classList.add('active');
-  var cards = document.querySelectorAll('.proj-card');
-  var count = 0;
-  cards.forEach(function(c){
-    var show = cat === 'todos' || c.dataset.cat === cat;
-    c.style.display = show ? '' : 'none';
-    if(show) count++;
+  // Filter
+  document.querySelectorAll('.filter button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.filter button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      const f = b.dataset.f;
+      document.querySelectorAll('.prj-row').forEach(r=>{
+        if(f==='all' || r.dataset.cat.split(' ').includes(f)) r.classList.remove('hidden');
+        else r.classList.add('hidden');
+      });
+    });
   });
-  document.getElementById('projsCount').textContent = count + ' projeto' + (count !== 1 ? 's' : '');
-}
 </script>
-
 </body>
 </html>

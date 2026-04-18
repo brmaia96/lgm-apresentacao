@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Book · LGM Engenharia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0B0B0A; --ink2:#2A2A28; --ink3:#6C6C66;
+  --paper:#F4F1EC; --paper2:#E8E4DC; --terra:#8A6B4A;
+  --D:'Fraunces',Georgia,serif;
+  --S:'Gill Sans MT','Century Gothic',sans-serif;
+  --B:'Inter',system-ui,sans-serif;
+  --M:'JetBrains Mono',monospace;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--B);font-size:15px;line-height:1.55;padding:60px clamp(20px,5vw,80px)}
+.wrap{max-width:1200px;margin:0 auto}
+.mast{border-bottom:1px solid var(--ink);padding-bottom:20px;margin-bottom:60px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
+.logo{font-family:var(--D);font-weight:300;font-size:32px}.logo em{font-style:italic;color:var(--terra)}
+.mast-meta{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-align:right;line-height:1.8}
+h1{font-family:var(--S);font-weight:200;font-size:clamp(56px,10vw,120px);line-height:.9;letter-spacing:-.03em;margin-bottom:24px}
+h1 em{font-family:var(--D);font-style:italic;color:var(--terra);font-weight:300}
+.lede{font-family:var(--D);font-weight:300;font-style:italic;font-size:clamp(20px,2.2vw,26px);line-height:1.45;color:var(--ink2);max-width:740px;margin-bottom:80px}
+.sec{padding:60px 0;border-top:1px solid var(--paper2)}
+.sec-num{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+.sec h2{font-family:var(--S);font-weight:200;font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.02em;margin-bottom:30px}
+.sec h2 em{font-family:var(--D);font-style:italic;color:var(--terra);font-weight:300}
+.sec p{font-family:var(--D);font-weight:300;font-size:clamp(17px,1.8vw,20px);line-height:1.55;color:var(--ink2);max-width:740px;margin-bottom:18px}
+
+/* palette */
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:860px){.pal{grid-template-columns:repeat(2,1fr)}}
+.pal .sw{aspect-ratio:3/4;border:1px solid rgba(11,11,10,.12);padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+.pal .sw .hex{font-family:var(--M);font-size:11px;letter-spacing:.1em}
+.pal .sw .name{font-family:var(--D);font-style:italic;font-size:22px}
+.sw-ink{background:var(--ink);color:var(--paper)}
+.sw-ink2{background:var(--ink2);color:var(--paper)}
+.sw-terra{background:var(--terra);color:var(--paper)}
+.sw-paper{background:var(--paper);color:var(--ink)}
+.sw-paper2{background:var(--paper2);color:var(--ink)}
+
+/* type */
+.type-row{padding:30px 0;border-bottom:1px solid var(--paper2);display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:baseline}
+@media(max-width:860px){.type-row{grid-template-columns:1fr}}
+.type-key{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
+.type-sample{line-height:1}
+.ts-display{font-family:var(--S);font-weight:200;font-size:72px;letter-spacing:-.02em}
+.ts-serif{font-family:var(--D);font-style:italic;font-weight:300;font-size:60px;color:var(--terra)}
+.ts-body{font-family:var(--B);font-weight:300;font-size:22px;line-height:1.5}
+.ts-mono{font-family:var(--M);font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+
+/* voice */
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.voice-grid{grid-template-columns:1fr}}
+.voice-col{border-top:2px solid var(--terra);padding-top:24px}
+.voice-col.no{border-top-color:var(--ink)}
+.voice-col h3{font-family:var(--S);font-weight:300;font-size:24px;margin-bottom:18px}
+.voice-col ul{list-style:none}
+.voice-col li{font-family:var(--D);font-weight:300;font-style:italic;font-size:19px;line-height:1.5;padding:12px 0;border-bottom:1px solid rgba(11,11,10,.08)}
+.voice-col li:before{content:'— ';color:var(--terra)}
+
+/* specs */
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--paper2);border:1px solid var(--paper2)}
+@media(max-width:860px){.specs{grid-template-columns:1fr}}
+.spec{background:var(--paper);padding:30px;border-top:2px solid var(--terra)}
+.spec-k{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
+.spec-v{font-family:var(--D);font-weight:300;font-size:22px;line-height:1.3}
+.spec-v em{font-style:italic;color:var(--terra)}
+
+/* hashtags */
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tag{padding:8px 14px;border:1px solid var(--ink);font-family:var(--M);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.tag.p{background:var(--ink);color:var(--paper)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mast">
+    <div class="logo">LGM <em>Engenharia</em></div>
+    <div class="mast-meta">
+      Brand Book · MMXXVI<br>
+      Versão 1.0 · Instagram @eng.gustavomaia
+    </div>
+  </div>
+
+  <h1>Manual <em>de marca.</em></h1>
+  <p class="lede">— Um sistema visual silencioso e preciso. Tipografia de jornal, paleta de prancheta, ritmo de caderno de obra. Inspirado em Mies van der Rohe, Tadao Ando, Studio MK27, Isay Weinfeld e Paulo Mendes da Rocha.</p>
+
+  <section class="sec">
+    <div class="sec-num">§ 01 · Posicionamento</div>
+    <h2>Engenharia <em>lenta.</em></h2>
+    <p>A LGM não é uma construtora a mais. É um consultório de engenharia onde cada projeto é pensado antes de ser executado — e executado do mesmo jeito que foi pensado. Não vendemos metro quadrado; vendemos a diferença entre achismo e cálculo.</p>
+    <p><strong>Promessa:</strong> o que é projetado é o que se constrói. Sem improvisação, sem surpresa no cronograma, sem "ficou bom assim mesmo".</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 02 · Paleta</div>
+    <h2>Cores <em>de ofício.</em></h2>
+    <p>Terra como assinatura. Tinta sobre papel — sem saturação, sem gradiente, sem vibração digital. A cor serve ao texto, nunca o inverso.</p>
+    <div class="pal">
+      <div class="sw sw-ink"><div class="name">Tinta</div><div><div class="hex">#0B0B0A</div><div style="font-family:var(--M);font-size:9px;opacity:.6">PRIMARY · INK</div></div></div>
+      <div class="sw sw-ink2"><div class="name">Grafite</div><div><div class="hex">#2A2A28</div><div style="font-family:var(--M);font-size:9px;opacity:.6">INK · 02</div></div></div>
+      <div class="sw sw-terra"><div class="name">Terra</div><div><div class="hex">#8A6B4A</div><div style="font-family:var(--M);font-size:9px;opacity:.6">ACCENT · TERRA</div></div></div>
+      <div class="sw sw-paper"><div class="name">Papel</div><div><div class="hex">#F4F1EC</div><div style="font-family:var(--M);font-size:9px;color:var(--ink3)">BACKGROUND</div></div></div>
+      <div class="sw sw-paper2"><div class="name">Cartão</div><div><div class="hex">#E8E4DC</div><div style="font-family:var(--M);font-size:9px;color:var(--ink3)">SURFACE · 02</div></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 03 · Tipografia</div>
+    <h2>Quatro <em>vozes.</em></h2>
+    <p>Um trio tipográfico hierárquico: Gill Sans para títulos-monumento, Fraunces itálico para o acento humano, Inter para o corpo e JetBrains Mono para dados técnicos.</p>
+    <div class="type-row">
+      <div class="type-key">I · Display</div>
+      <div><div class="type-sample ts-display">Abg 120</div><div style="font-family:var(--M);font-size:11px;color:var(--ink3);margin-top:10px">GILL SANS · WEIGHT 200 · TRACKING -0.02EM</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-key">II · Serif<br>(acento)</div>
+      <div><div class="type-sample ts-serif">&amp; acento</div><div style="font-family:var(--M);font-size:11px;color:var(--ink3);margin-top:10px">FRAUNCES ITALIC · WEIGHT 300</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-key">III · Body</div>
+      <div><div class="type-sample ts-body">Corpo do texto em Inter 300.</div><div style="font-family:var(--M);font-size:11px;color:var(--ink3);margin-top:10px">INTER · WEIGHT 300 · LINE-HEIGHT 1.55</div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-key">IV · Technical</div>
+      <div><div class="type-sample ts-mono">§ 04 · MMXXVI · CREA-SP</div><div style="font-family:var(--M);font-size:11px;color:var(--ink3);margin-top:10px">JETBRAINS MONO · TRACKING 0.18EM · UPPERCASE</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 04 · Tom de voz</div>
+    <h2>Como <em>falamos.</em></h2>
+    <div class="voice-grid">
+      <div class="voice-col">
+        <h3>✓ Somos</h3>
+        <ul>
+          <li>Técnicos sem ser frios</li>
+          <li>Precisos na palavra</li>
+          <li>Breves — o espaço em branco também fala</li>
+          <li>Diretos: número antes de adjetivo</li>
+          <li>Serenos, nunca urgentes</li>
+          <li>Confiantes sem arrogância</li>
+        </ul>
+      </div>
+      <div class="voice-col no">
+        <h3>✕ Não somos</h3>
+        <ul>
+          <li>"Realizamos seus sonhos"</li>
+          <li>Emojis festivos, CAPS LOCK</li>
+          <li>Promessas milagrosas</li>
+          <li>Gatilhos mentais, "últimas vagas"</li>
+          <li>Termos genéricos: "qualidade", "excelência"</li>
+          <li>Selfies de obra sem contexto técnico</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 05 · Grid & formato</div>
+    <h2>Sistema <em>editorial.</em></h2>
+    <p>Todo post pensado como prancha técnica. Marca d'água editorial no topo (Nº, seção, coordenada), <em>corner marks</em> na borda, grade de 60-80px visível no fundo escuro. Nunca centralizar; sempre alinhar à esquerda, como texto de livro.</p>
+    <div class="specs">
+      <div class="spec"><div class="spec-k">I · Feed</div><div class="spec-v">1080 × 1350<br><em>4:5 · retrato</em></div></div>
+      <div class="spec"><div class="spec-k">II · Stories</div><div class="spec-v">1080 × 1920<br><em>9:16</em></div></div>
+      <div class="spec"><div class="spec-k">III · Grid</div><div class="spec-v">Margem 60 px<br><em>Baseline 8 px</em></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 06 · Sistema de numeração</div>
+    <h2>Tudo é <em>catalogado.</em></h2>
+    <p>Os posts seguem numeração editorial contínua. Nunca "Dica #1" — sempre <strong>Nº 01 · MMXXVI</strong>, ou <strong>§ 03.2</strong>, ou <strong>Fig. 07</strong>. Datas em algarismos romanos sempre que possível. Isso cria coleção — cada post é uma página de um caderno em andamento.</p>
+    <div class="specs">
+      <div class="spec"><div class="spec-k">Post</div><div class="spec-v">Nº 01 <em>· MMXXVI</em></div></div>
+      <div class="spec"><div class="spec-k">Seção</div><div class="spec-v">§ 03 <em>· Steel Frame</em></div></div>
+      <div class="spec"><div class="spec-k">Figura</div><div class="spec-v">Fig. 07 <em>· Conforto térmico</em></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 07 · Hashtags & assinatura</div>
+    <h2>Identidade <em>em texto.</em></h2>
+    <p>Sempre encerrar com linha de assinatura em monospace: <span style="font-family:var(--M);font-size:13px;letter-spacing:.14em">— LGM · MARÍLIA/SP · CREA-SP 5071068977</span></p>
+    <div class="tags">
+      <span class="tag p">#LGMengenharia</span>
+      <span class="tag">#engenhariaCivil</span>
+      <span class="tag">#arquiteturaMarilia</span>
+      <span class="tag">#steelFrameBrasil</span>
+      <span class="tag">#calculoEstrutural</span>
+      <span class="tag">#engenhariaLenta</span>
+      <span class="tag">#projetoCasa</span>
+      <span class="tag">#obraTecnica</span>
+      <span class="tag">#engMarilia</span>
+      <span class="tag">#CREAsp</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-num">§ 08 · Bio Instagram</div>
+    <h2>Perfil.</h2>
+    <div style="background:var(--paper2);border:1px solid var(--ink);padding:30px;max-width:500px;font-family:var(--D);font-weight:300;font-size:18px;line-height:1.55">
+      <div style="font-family:var(--S);font-size:24px;margin-bottom:6px">@eng.gustavomaia</div>
+      <div style="font-family:var(--M);font-size:11px;letter-spacing:.14em;color:var(--ink3);margin-bottom:16px">LUIS GUSTAVO MAIA · ENG. CIVIL</div>
+      <div>— Projeto, cálculo e steel frame.<br>— CREA-SP 5071068977 · Marília/SP<br>— Engenharia lenta: projetar bem é construir menos vezes.</div>
+      <div style="margin-top:16px;font-family:var(--M);font-size:11px;letter-spacing:.14em;color:var(--terra)">↓ ORÇAMENTO · BRMAIA96.GITHUB.IO/LGM-APRESENTACAO</div>
+    </div>
+  </section>
+
+  <div style="padding:60px 0 20px;font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);border-top:1px solid var(--ink);margin-top:60px">
+    Colophon · LGM Engenharia · MMXXVI · Marília/SP
+  </div>
+</div>
+</body>
+</html>

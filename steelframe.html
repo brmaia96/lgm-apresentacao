@@ -3,674 +3,319 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Light Steel Frame · LGM Engenharia — LSF, Vãos Livres, Projeto e Execução</title>
-<meta name="description" content="Steel frame em Marília–SP e todo o Brasil. Vãos de até 10m sem pilares, obra 3× mais rápida, estrutura 6× mais leve. Projeto, execução e ART — Luis Gustavo Maia, CREA-SP 5071068977.">
-<link rel="canonical" href="https://brmaia96.github.io/lgm-apresentacao/steelframe.html">
+<title>§03 · Light Steel Frame — LGM Engenharia</title>
+<meta name="description" content="Construção em Light Steel Frame com engenharia certificada. Sistema industrializado, preciso, rápido e sustentável.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink:    #0D0D0D;
-  --ink2:   #3A3A3A;
-  --ink3:   #888880;
-  --paper:  #F6F4F0;
-  --paper2: #ECEAE5;
-  --white:  #FFFFFF;
-  --terra:  #7A6B5A;
-  --line:   rgba(13,13,13,0.10);
-  --D: 'Gill Sans MT','Gill Sans','Century Gothic',Calibri,sans-serif;
-  --B: 'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0B0B0A; --ink2:#2A2A28; --ink3:#6C6C66;
+  --paper:#F4F1EC; --paper2:#E8E4DC; --terra:#8A6B4A;
+  --D:'Fraunces','Gill Sans MT','Century Gothic',Georgia,serif;
+  --S:'Gill Sans MT','Gill Sans','Century Gothic',Calibri,sans-serif;
+  --B:'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --M:'JetBrains Mono','Menlo','Consolas',monospace;
+  --max:1480px; --pad:clamp(24px,5vw,80px);
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--paper);color:var(--ink);font-family:var(--B);font-size:clamp(14px,1.1vw,16px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--B);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 
-/* ── SCROLL REVEAL ── */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-delay-1{transition-delay:.1s;}
-.reveal-delay-2{transition-delay:.2s;}
-.reveal-delay-3{transition-delay:.3s;}
-.reveal-delay-4{transition-delay:.4s;}
+.masthead{border-bottom:1px solid var(--ink);background:var(--paper);position:sticky;top:0;z-index:50}
+.mast-rail{display:flex;justify-content:space-between;align-items:center;padding:10px var(--pad);font-family:var(--M);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);border-bottom:1px solid var(--ink2);max-width:var(--max);margin:0 auto}
+.mast-rail .sep{opacity:.4;margin:0 10px}
+.mast-main{display:flex;justify-content:space-between;align-items:center;padding:18px var(--pad);max-width:var(--max);margin:0 auto;gap:40px}
+.mast-logo{font-family:var(--D);font-weight:300;font-size:26px;letter-spacing:-.01em;line-height:1}
+.mast-logo em{font-style:italic;color:var(--terra);font-weight:300}
+.mast-nav{display:flex;gap:28px;font-family:var(--M);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.mast-nav a{position:relative;padding:4px 0;transition:color .3s}
+.mast-nav a:hover,.mast-nav a.active{color:var(--ink)}
+.mast-nav a.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--terra)}
+@media(max-width:860px){.mast-nav{display:none}.mast-rail .hide-sm{display:none}}
 
-/* ── TOPBAR ── */
-.topbar{
-  position:sticky;top:0;z-index:200;
-  background:rgba(246,244,240,.92);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 80px;height:64px;
-}
-.topbar-logo{font-family:var(--D);font-size:22px;font-weight:300;letter-spacing:.14em;color:var(--ink);text-decoration:none;}
-.topbar-nav{display:flex;align-items:center;gap:36px;}
-.topbar-nav a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .2s;}
-.topbar-nav a:hover,.topbar-nav a.active{color:var(--ink);}
-.topbar-cta{
-  background:var(--ink);color:var(--paper);
-  font-family:var(--D);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  padding:10px 20px;text-decoration:none;transition:background .2s;
-}
-.topbar-cta:hover{background:var(--terra);}
+.hero{position:relative;padding:clamp(60px,12vh,140px) 0 clamp(80px,15vh,180px);background:var(--ink);color:var(--paper);overflow:hidden;border-bottom:1px solid var(--ink2)}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--ink2) 1px,transparent 1px),linear-gradient(90deg,var(--ink2) 1px,transparent 1px);background-size:80px 80px;opacity:.25;pointer-events:none}
+.hero-inner{position:relative;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.hero-top{display:flex;justify-content:space-between;font-family:var(--M);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#9A9A94;margin-bottom:80px}
+.hero-top .tag{border:1px solid #3A3A37;padding:6px 12px;border-radius:2px}
+.hero-display{font-family:var(--S);font-weight:200;font-size:clamp(64px,13vw,200px);line-height:.88;letter-spacing:-.035em;color:var(--paper)}
+.hero-display em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.hero-lede{margin-top:48px;max-width:700px;font-family:var(--D);font-weight:300;font-style:italic;font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#C8C4BC}
+.hero-inner::after{content:'';position:absolute;inset:clamp(20px,5vh,60px) var(--pad);pointer-events:none;
+  background:
+    linear-gradient(var(--terra),var(--terra)) left top/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left top/1px 18px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right top/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right top/1px 18px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left bottom/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left bottom/1px 18px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right bottom/18px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right bottom/1px 18px no-repeat}
 
-/* ── HERO ── */
-.hero{
-  position:relative;min-height:580px;
-  display:flex;flex-direction:column;justify-content:flex-end;
-  overflow:hidden;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background:url('steel_frame.jpg') center/cover no-repeat;
-  opacity:.30;
-}
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top, rgba(13,13,13,.92) 0%, rgba(13,13,13,.55) 50%, rgba(13,13,13,.25) 100%);
-}
-.hero-content{
-  position:relative;z-index:1;
-  padding:clamp(60px,8vw,120px) 80px clamp(72px,8vw,112px);
-  max-width:860px;
-}
-.hero-eyebrow{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:24px;
-}
-.hero-title{
-  font-family:var(--D);
-  font-size:clamp(52px,6vw,90px);
-  font-weight:200;color:var(--paper);
-  line-height:1.0;letter-spacing:.01em;
-  margin-bottom:28px;
-}
-.hero-sub{
-  font-size:clamp(14px,1.2vw,17px);
-  color:rgba(246,244,240,.72);
-  line-height:1.8;
-  text-align:justify;
-  max-width:680px;
-  margin-bottom:40px;
-}
-.hero-cta{
-  display:inline-flex;align-items:center;gap:12px;
-  background:#25D366;color:#fff;
-  padding:16px 28px;
-  font-family:var(--D);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  text-decoration:none;transition:background .2s,transform .2s;
-}
-.hero-cta:hover{background:#1da84f;transform:translateY(-2px);}
-.hero-cta svg{width:18px;height:18px;fill:#fff;flex-shrink:0;}
+.sec{padding:clamp(80px,12vh,160px) 0;border-bottom:1px solid var(--paper2)}
+.sec.dark{background:var(--ink);color:var(--paper);border-bottom-color:var(--ink2)}
+.sec-head{display:grid;grid-template-columns:140px 1fr;gap:40px;margin-bottom:80px;align-items:start}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:16px}}
+.sec-num{font-family:var(--M);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);padding-top:12px}
+.sec-title{font-family:var(--S);font-weight:200;font-size:clamp(40px,6vw,76px);line-height:.98;letter-spacing:-.02em}
+.sec-title em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.sec-sub{margin-top:20px;font-family:var(--D);font-weight:300;font-style:italic;font-size:clamp(17px,2vw,22px);line-height:1.45;color:var(--ink2);max-width:700px}
+.sec.dark .sec-sub{color:#C8C4BC}
 
-/* ── DIFERENCIAIS ── */
-.diferenciais{
-  background:#111;
-  padding:clamp(60px,8vw,120px) 80px;
-}
-.diferenciais-label{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:48px;
-}
-.diferenciais-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:3px;
-}
-.dif-card{
-  background:rgba(246,244,240,.04);
-  border:1px solid rgba(246,244,240,.06);
-  padding:44px 36px;
-  display:flex;flex-direction:column;gap:14px;
-  transition:background .25s,border-color .25s;
-}
-.dif-card:hover{background:rgba(246,244,240,.07);border-color:rgba(246,244,240,.12);}
-.dif-metric{
-  font-family:var(--D);font-size:clamp(44px,4.5vw,68px);
-  font-weight:200;color:var(--terra);line-height:1;
-  letter-spacing:.01em;
-}
-.dif-title{
-  font-family:var(--D);font-size:clamp(16px,1.4vw,20px);
-  font-weight:300;color:var(--paper);line-height:1.2;
-}
-.dif-desc{
-  font-size:clamp(13px,1vw,14px);color:rgba(246,244,240,.45);
-  line-height:1.8;text-align:justify;
-}
+/* O QUE É — two col */
+.def-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:start}
+@media(max-width:1000px){.def-grid{grid-template-columns:1fr}}
+.def-text p{font-family:var(--D);font-weight:300;font-size:clamp(18px,1.6vw,22px);line-height:1.55;color:var(--ink2);margin-bottom:22px}
+.def-text p:first-of-type{font-size:clamp(22px,2vw,28px);color:var(--ink)}
+.def-spec{border:1px solid var(--ink);padding:clamp(28px,4vw,44px);position:relative;background:var(--paper2)}
+.def-spec::before{content:'FICHA TÉCNICA';position:absolute;top:-9px;left:20px;background:var(--paper);padding:0 10px;font-family:var(--M);font-size:10px;letter-spacing:.2em;color:var(--terra)}
+.def-item{padding:20px 0;border-bottom:1px solid rgba(11,11,10,.12);display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:baseline}
+.def-item:last-child{border-bottom:none;padding-bottom:0}
+.def-item:first-child{padding-top:0}
+.def-key{font-family:var(--M);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.def-val{font-family:var(--D);font-weight:300;font-size:19px;line-height:1.35}
 
-/* ── COUNTERS ── */
-.counters{
-  background:var(--ink);
-  padding:clamp(60px,8vw,120px) 80px;
-  border-top:1px solid rgba(246,244,240,.06);
-}
-.counters-label{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:60px;
-}
-.counters-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:3px;
-}
-.counter-card{
-  padding:44px 32px;
-  border:1px solid rgba(246,244,240,.06);
-  display:flex;flex-direction:column;gap:10px;
-}
-.counter-num{
-  font-family:var(--D);
-  font-size:clamp(52px,5vw,80px);
-  font-weight:200;color:var(--paper);
-  line-height:1;letter-spacing:.01em;
-}
-.counter-unit{
-  font-family:var(--D);font-size:clamp(20px,2vw,28px);
-  color:var(--terra);font-weight:200;
-}
-.counter-title{
-  font-size:clamp(10px,0.85vw,12px);letter-spacing:.2em;text-transform:uppercase;
-  color:rgba(246,244,240,.5);margin-top:4px;
-}
-.counter-desc{
-  font-size:clamp(12px,0.9vw,13px);color:rgba(246,244,240,.28);
-  line-height:1.75;text-align:justify;
-  border-top:1px solid rgba(246,244,240,.06);padding-top:16px;margin-top:6px;
-}
+/* VANTAGENS — 6 cards on dark */
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink2)}
+@media(max-width:1000px){.adv-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.adv-grid{grid-template-columns:1fr}}
+.adv-card{background:var(--ink);padding:clamp(30px,3.5vw,48px);min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.adv-card:hover{background:#15150F}
+.adv-rom{font-family:var(--D);font-style:italic;font-weight:300;font-size:18px;color:var(--terra)}
+.adv-title{font-family:var(--S);font-weight:300;font-size:clamp(24px,2.5vw,32px);line-height:1.1;color:var(--paper);margin-top:30px}
+.adv-desc{font-family:var(--D);font-weight:300;font-size:16px;line-height:1.5;color:#B4AFA5;margin-top:16px}
 
-/* ── COMPARATIVO ── */
-.comparativo{
-  background:#0A0A0A;
-  padding:clamp(60px,8vw,120px) 80px;
-}
-.comparativo-header{margin-bottom:64px;}
-.comparativo-label{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:20px;
-}
-.comparativo-title{
-  font-family:var(--D);font-size:clamp(28px,3vw,46px);
-  font-weight:200;color:var(--paper);line-height:1.1;
-}
-.comp-row{
-  display:grid;grid-template-columns:180px 1fr;gap:32px;
-  align-items:start;
-  padding:32px 0;
-  border-bottom:1px solid rgba(246,244,240,.05);
-}
-.comp-row:first-child{border-top:1px solid rgba(246,244,240,.05);}
-.comp-label-col{}
-.comp-criterion{
-  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:rgba(246,244,240,.35);margin-bottom:4px;
-}
-.comp-bars-col{display:flex;flex-direction:column;gap:14px;}
-.bar-group{display:flex;flex-direction:column;gap:6px;}
-.bar-meta{display:flex;justify-content:space-between;align-items:baseline;}
-.bar-name{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,244,240,.5);}
-.bar-value{
-  font-family:var(--D);font-size:clamp(16px,1.4vw,20px);
-  font-weight:200;color:var(--paper);
-}
-.bar-track{height:4px;border-radius:2px;background:rgba(246,244,240,.06);overflow:hidden;}
-.bar-fill{
-  height:100%;border-radius:2px;
-  width:0;
-  transition:width 1.1s cubic-bezier(.22,1,.36,1);
-}
-.bar-fill.sf{background:var(--terra);}
-.bar-fill.alv{background:rgba(246,244,240,.15);}
+/* PROCESSO — horizontal timeline */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--paper2);border:1px solid var(--paper2)}
+@media(max-width:860px){.proc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.proc{grid-template-columns:1fr}}
+.proc-step{background:var(--paper);padding:clamp(28px,3vw,44px);min-height:260px;display:flex;flex-direction:column;justify-content:space-between;border-top:2px solid var(--terra)}
+.proc-num{font-family:var(--D);font-weight:300;font-size:48px;line-height:1;color:var(--terra)}
+.proc-label{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:14px}
+.proc-title{font-family:var(--S);font-weight:300;font-size:24px;line-height:1.15;margin-top:24px}
+.proc-desc{font-family:var(--D);font-weight:300;font-size:15px;line-height:1.5;color:var(--ink2);margin-top:12px}
 
-/* ── POR QUE LGM ── */
-.porque{
-  background:var(--white);
-  padding:clamp(60px,8vw,120px) 80px;
-  border-bottom:1px solid var(--line);
-}
-.porque-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;
-}
-.porque-left{}
-.porque-section-label{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:24px;
-}
-.porque-title{
-  font-family:var(--D);font-size:clamp(26px,2.8vw,42px);
-  font-weight:300;color:var(--ink);line-height:1.15;
-}
-.porque-right{
-  display:flex;flex-direction:column;gap:0;
-  padding-top:4px;
-}
-.porque-item{
-  display:flex;gap:18px;align-items:flex-start;
-  padding:22px 0;
-  border-bottom:1px solid var(--line);
-}
-.porque-item:first-child{border-top:1px solid var(--line);}
-.porque-dot{
-  width:8px;height:8px;border-radius:50%;
-  background:var(--terra);flex-shrink:0;margin-top:8px;
-}
-.porque-text{font-size:clamp(14px,1.1vw,15px);color:var(--ink2);line-height:1.7;}
+/* COMPARAÇÃO — tabela editorial */
+.comp-table{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.comp-row{display:grid;grid-template-columns:1fr 1fr 1fr;padding:22px 0;border-bottom:1px solid var(--paper2);align-items:baseline;gap:20px}
+.comp-row:last-child{border-bottom:none}
+.comp-row.head{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--ink);padding:14px 0}
+.comp-cat{font-family:var(--D);font-weight:300;font-size:20px;font-style:italic;color:var(--ink)}
+.comp-sf{font-family:var(--D);font-weight:400;font-size:18px;color:var(--terra)}
+.comp-alv{font-family:var(--B);font-weight:300;font-size:15px;color:var(--ink3)}
 
-/* ── CTA FINAL ── */
-.cta-final{
-  background:var(--ink);
-  padding:clamp(60px,8vw,120px) 80px;
-}
-.cta-final-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
-}
-.cta-label{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--terra);margin-bottom:20px;
-}
-.cta-title{
-  font-family:var(--D);font-size:clamp(32px,3.5vw,56px);
-  font-weight:200;color:var(--paper);line-height:1.1;
-  margin-bottom:20px;
-}
-.cta-desc{
-  font-size:clamp(13px,1vw,14px);color:rgba(246,244,240,.38);
-  line-height:1.85;text-align:justify;
-}
-.cta-buttons{
-  display:flex;flex-direction:column;gap:16px;
-}
-.btn-wa{
-  display:inline-flex;align-items:center;gap:12px;
-  background:#25D366;color:#fff;
-  padding:18px 28px;
-  font-family:var(--D);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-  text-decoration:none;transition:background .2s,transform .2s;
-  width:fit-content;
-}
-.btn-wa:hover{background:#1da84f;transform:translateY(-2px);}
-.btn-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
-.btn-secondary{
-  display:inline-flex;align-items:center;gap:8px;
-  color:rgba(246,244,240,.4);
-  font-family:var(--D);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  text-decoration:none;transition:color .2s;
-  padding-top:4px;width:fit-content;
-}
-.btn-secondary:hover{color:var(--paper);}
+/* CTA */
+.cta-section{padding:clamp(80px,12vh,140px) 0;background:var(--ink);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--ink2) 1px,transparent 1px),linear-gradient(90deg,var(--ink2) 1px,transparent 1px);background-size:80px 80px;opacity:.2}
+.cta-section .wrap{position:relative}
+.cta-tag{font-family:var(--M);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:30px}
+.cta-title{font-family:var(--S);font-weight:200;font-size:clamp(40px,6vw,80px);line-height:.98;letter-spacing:-.02em;margin-bottom:40px}
+.cta-title em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.cta-btn{display:inline-flex;align-items:center;gap:14px;padding:18px 34px;border:1px solid var(--paper);font-family:var(--M);font-size:11px;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s}
+.cta-btn::after{content:'→';font-family:var(--D);font-size:16px;transition:transform .3s}
+.cta-btn:hover{background:var(--paper);color:var(--ink)}
+.cta-btn:hover::after{transform:translateX(6px)}
 
-/* ── FOOTER ── */
-.footer{background:var(--paper2);padding:32px 80px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);}
-.footer-logo{font-family:var(--D);font-size:16px;letter-spacing:.14em;color:var(--ink);}
-.footer-copy{font-size:10px;letter-spacing:.1em;color:var(--ink3);}
-.footer-links{display:flex;gap:24px;}
-.footer-links a{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--terra);}
+.colophon{padding:60px var(--pad) 40px;background:var(--ink);color:#9A9A94;border-top:1px solid var(--ink2)}
+.col-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+@media(max-width:860px){.col-inner{grid-template-columns:1fr}}
+.col-logo{font-family:var(--D);font-weight:300;font-size:22px;color:var(--paper);margin-bottom:8px}
+.col-logo em{font-style:italic;color:var(--terra)}
+.col-meta{font-family:var(--M);font-size:10px;letter-spacing:.16em;text-transform:uppercase;line-height:1.9}
+.col-rom{font-family:var(--D);font-style:italic;font-size:14px;color:var(--ink3);text-align:right}
+@media(max-width:860px){.col-rom{text-align:left}}
 
-/* ── WA FLOAT ── */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:300;display:flex;align-items:center;gap:11px;background:#25D366;color:#fff;padding:14px 22px 14px 18px;border-radius:100px;font-family:var(--B);font-size:15px;font-weight:600;text-decoration:none;letter-spacing:.01em;box-shadow:0 4px 20px rgba(37,211,102,.40);transition:transform .22s,box-shadow .22s;}
-.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(37,211,102,.55);}
-.wa-float svg{width:22px;height:22px;fill:#fff;flex-shrink:0;}
+.wa-float{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:var(--ink);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--M);font-size:18px;z-index:90;border:1px solid var(--paper);transition:background .3s,transform .3s}
+.wa-float:hover{background:var(--terra);transform:scale(1.08)}
 
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  .topbar{padding:0 24px;}
-  .topbar-nav{display:none;}
-  .hero-content{padding:48px 24px 60px;}
-  .diferenciais{padding:48px 24px;}
-  .diferenciais-grid{grid-template-columns:1fr;}
-  .counters{padding:48px 24px;}
-  .counters-grid{grid-template-columns:1fr 1fr;}
-  .comparativo{padding:48px 24px;}
-  .comp-row{grid-template-columns:1fr;gap:16px;}
-  .porque{padding:48px 24px;}
-  .porque-grid{grid-template-columns:1fr;gap:40px;}
-  .cta-final{padding:48px 24px;}
-  .cta-final-grid{grid-template-columns:1fr;gap:40px;}
-  .footer{padding:24px;flex-direction:column;gap:16px;text-align:center;}
-  .wa-float span{display:none;}
-  .wa-float{padding:14px 16px;}
-}
-@media(max-width:600px){
-  .counters-grid{grid-template-columns:1fr;}
-  .diferenciais-grid{grid-template-columns:1fr;}
-}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.3s}.d6{transition-delay:.36s}
 </style>
 </head>
 <body>
 
-<!-- ══ TOPBAR ══════════════════════════════════ -->
-<header class="topbar">
-  <a href="index.html" class="topbar-logo">LGM</a>
-  <nav class="topbar-nav">
-    <a href="index.html">Início</a>
-    <a href="index.html#servicos">Serviços</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="blog.html">Blog</a>
-    <a href="index.html#contato">Contato</a>
-  </nav>
-  <a href="https://wa.me/5514991850799?text=Olá%2C%20vim%20pela%20página%20de%20Steel%20Frame%20e%20quero%20um%20orçamento" target="_blank" class="topbar-cta">Orçamento</a>
+<header class="masthead">
+  <div class="mast-rail">
+    <div><span>Nº 03 · MMXXVI</span><span class="sep">·</span><span class="hide-sm">22°12′S 49°56′W · MARÍLIA/SP</span></div>
+    <div><span class="hide-sm">CREA-SP 5071068977</span><span class="sep hide-sm">·</span><span>§03 · STEEL FRAME</span></div>
+  </div>
+  <div class="mast-main">
+    <a href="index.html" class="mast-logo">LGM <em>Engenharia</em></a>
+    <nav class="mast-nav">
+      <a href="index.html">§00</a>
+      <a href="sobre.html">§01</a>
+      <a href="servicos.html">§02</a>
+      <a href="steelframe.html" class="active">§03</a>
+      <a href="projetos.html">§04</a>
+      <a href="blog.html">§05</a>
+      <a href="orcamento.html">§06</a>
+    </nav>
+  </div>
 </header>
 
-
-<!-- ══ HERO ════════════════════════════════════ -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content reveal">
-    <div class="hero-eyebrow">LSF — Sistema Construtivo · Tecnologia</div>
-    <h1 class="hero-title">Light Steel Frame</h1>
-    <p class="hero-sub">Sistema moderno e eficiente: conseguimos vencer grandes vãos com uma estrutura leve, possibilitando assim idealizar um projeto de arquitetura fora da caixa. Sem padrões, sem limitações de planta — a liberdade de criar começa na estrutura.</p>
-    <a href="https://wa.me/5514991850799?text=Olá%2C%20quero%20um%20projeto%20em%20Steel%20Frame" target="_blank" class="hero-cta">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-      Solicitar orçamento
-    </a>
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="tag">Fig. 03 · Sistema construtivo</div>
+      <div>Início › §03</div>
+    </div>
+    <h1 class="hero-display">Light Steel<br><em>Frame.</em></h1>
+    <p class="hero-lede">— Engenharia industrializada em aço galvanizado. Precisão milimétrica, desempenho térmico e cronograma que se cumpre.</p>
   </div>
 </section>
 
-
-<!-- ══ DIFERENCIAIS ══════════════════════════════ -->
-<section class="diferenciais">
-  <div class="diferenciais-label reveal">Por que Steel Frame</div>
-  <div class="diferenciais-grid">
-
-    <div class="dif-card reveal reveal-delay-1">
-      <div class="dif-metric">10 m</div>
-      <div class="dif-title">Vãos livres sem pilares</div>
-      <div class="dif-desc">O sistema permite vencer vãos de até 10 metros sem pilares intermediários — algo impossível em alvenaria convencional. A planta fica totalmente livre para criar ambientes abertos e modernos.</div>
-    </div>
-
-    <div class="dif-card reveal reveal-delay-2">
-      <div class="dif-metric">6×</div>
-      <div class="dif-title">Estrutura mais leve</div>
-      <div class="dif-desc">A estrutura em steel frame é até 6 vezes mais leve que a alvenaria convencional. Isso reduz drasticamente o custo e a complexidade da fundação — economia real desde o início da obra.</div>
-    </div>
-
-    <div class="dif-card reveal reveal-delay-3">
-      <div class="dif-metric">NBR 15575</div>
-      <div class="dif-title">Conforto térmico e acústico</div>
-      <div class="dif-desc">A ossatura recebe mantas e isolamentos que superam os requisitos da ABNT NBR 15575 — conforto que a alvenaria convencional raramente alcança sem custo adicional.</div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ══ COUNTERS ══════════════════════════════════ -->
-<section class="counters">
-  <div class="counters-label reveal">Números que importam</div>
-  <div class="counters-grid">
-
-    <div class="counter-card reveal reveal-delay-1">
+<!-- §03.1 O QUE É -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num reveal">§03.1 · Definição</div>
       <div>
-        <span class="counter-num" data-target="3" data-suffix="×">0</span>
+        <h2 class="sec-title reveal d1">O sistema <em>em síntese.</em></h2>
+        <p class="sec-sub reveal d2">Uma estrutura leve, seca e industrializada — montada como um mecanismo de relógio, dimensionada por cálculo estrutural e entregue no prazo.</p>
       </div>
-      <div class="counter-title">Mais rápido</div>
-      <div class="counter-desc">Uma residência de 100m² em steel frame sai do zero ao acabado em 90 dias. Alvenaria convencional leva 270 dias ou mais.</div>
     </div>
+    <div class="def-grid">
+      <div class="def-text reveal d1">
+        <p>O <em style="font-style:italic;color:var(--terra)">Light Steel Frame</em> é um sistema construtivo baseado em perfis de aço galvanizado formados a frio, montados em obra a partir de um projeto estrutural preciso.</p>
+        <p>Difere da alvenaria tradicional em tudo — no peso, no tempo, na precisão, no desperdício. Enquanto o tijolo é artesanal e úmido, o steel frame é industrial e seco.</p>
+        <p>Não é uma obra mais barata. É uma obra mais honesta: o que se projeta é o que se constrói. Sem retrabalho, sem quebradeira, sem surpresas no cronograma.</p>
+      </div>
+      <div class="def-spec reveal d2">
+        <div class="def-item"><div class="def-key">I · Material</div><div class="def-val">Aço galvanizado<br>Zincado Z275</div></div>
+        <div class="def-item"><div class="def-key">II · Norma</div><div class="def-val">ABNT NBR 15253<br>ABNT NBR 14762</div></div>
+        <div class="def-item"><div class="def-key">III · Prazo</div><div class="def-val">30 – 50 % mais rápido<br>que alvenaria</div></div>
+        <div class="def-item"><div class="def-key">IV · Vida útil</div><div class="def-val">Superior a 100 anos<br>com manutenção mínima</div></div>
+        <div class="def-item"><div class="def-key">V · Sustentab.</div><div class="def-val">Aço 100 % reciclável<br>Baixa emissão de CO₂</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="counter-card reveal reveal-delay-2">
+<!-- §03.2 VANTAGENS -->
+<section class="sec dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num reveal" style="color:var(--terra)">§03.2 · Vantagens</div>
       <div>
-        <span class="counter-num" data-target="80" data-suffix="%">0</span>
+        <h2 class="sec-title reveal d1">Por que <em>steel frame.</em></h2>
+        <p class="sec-sub reveal d2">Seis razões técnicas — não publicitárias — para considerar o sistema na sua próxima obra.</p>
       </div>
-      <div class="counter-title">Menos resíduo</div>
-      <div class="counter-desc">Obra a seco, sem entulho, sem quebra de bloco. O canteiro termina limpo e praticamente todo o material é aproveitado.</div>
     </div>
+  </div>
+  <div class="wrap" style="padding:0 var(--pad)">
+    <div class="adv-grid">
+      <div class="adv-card reveal d1">
+        <div class="adv-rom">I.</div>
+        <div><div class="adv-title">Rapidez real</div><p class="adv-desc">Uma casa de 120 m² é entregue em 90 a 120 dias. O cronograma sai do Excel e encontra a obra.</p></div>
+      </div>
+      <div class="adv-card reveal d2">
+        <div class="adv-rom">II.</div>
+        <div><div class="adv-title">Precisão<br>milimétrica</div><p class="adv-desc">Perfis industrializados, cortados por máquina. A tolerância é de milímetros — não de "mais ou menos".</p></div>
+      </div>
+      <div class="adv-card reveal d3">
+        <div class="adv-rom">III.</div>
+        <div><div class="adv-title">Conforto<br>térmico</div><p class="adv-desc">Lã mineral e painéis multicamada. A casa responde melhor ao verão de Marília e ao inverno da serra.</p></div>
+      </div>
+      <div class="adv-card reveal d4">
+        <div class="adv-rom">IV.</div>
+        <div><div class="adv-title">Leveza<br>estrutural</div><p class="adv-desc">Até 10× mais leve que alvenaria. Fundações menores, menos impacto no terreno, mais liberdade de balanços.</p></div>
+      </div>
+      <div class="adv-card reveal d5">
+        <div class="adv-rom">V.</div>
+        <div><div class="adv-title">Canteiro<br>limpo</div><p class="adv-desc">Sem entulho, sem poeira, sem ruído. Montagem seca — o vizinho não percebe que tem obra do lado.</p></div>
+      </div>
+      <div class="adv-card reveal d6">
+        <div class="adv-rom">VI.</div>
+        <div><div class="adv-title">Custo<br>previsível</div><p class="adv-desc">O que é projetado é comprado. Sem surpresas, sem aditivos escondidos, sem "tijolo a mais".</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="counter-card reveal reveal-delay-3">
+<!-- §03.3 PROCESSO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num reveal">§03.3 · Processo</div>
       <div>
-        <span class="counter-num" data-prefix="±" data-target="1" data-suffix="mm">0</span>
+        <h2 class="sec-title reveal d1">Quatro <em>etapas.</em></h2>
+        <p class="sec-sub reveal d2">Da prancheta ao habite-se — sem improvisação.</p>
       </div>
-      <div class="counter-title">Tolerância estrutural</div>
-      <div class="counter-desc">Perfis de aço galvanizado usinados com tolerância de ±1mm. Precisão que a alvenaria convencional não consegue fisicamente.</div>
     </div>
+    <div class="proc">
+      <div class="proc-step reveal d1">
+        <div><div class="proc-num">01</div><div class="proc-label">Projeto</div></div>
+        <div><div class="proc-title">Cálculo &amp; detalhamento</div><p class="proc-desc">Arquitetônico, estrutural, elétrico, hidráulico — todos integrados e compatibilizados em BIM.</p></div>
+      </div>
+      <div class="proc-step reveal d2">
+        <div><div class="proc-num">02</div><div class="proc-label">Fundação</div></div>
+        <div><div class="proc-title">Radier ou sapatas</div><p class="proc-desc">Fundação dimensionada para a estrutura leve — consumo de concreto reduzido em até 40 %.</p></div>
+      </div>
+      <div class="proc-step reveal d3">
+        <div><div class="proc-num">03</div><div class="proc-label">Montagem</div></div>
+        <div><div class="proc-title">Estrutura &amp; fechamento</div><p class="proc-desc">Perfis aparafusados em obra. Placas cimentícias externas, gesso acartonado internas, lã mineral entre.</p></div>
+      </div>
+      <div class="proc-step reveal d4">
+        <div><div class="proc-num">04</div><div class="proc-label">Acabamento</div></div>
+        <div><div class="proc-title">Instalações &amp; final</div><p class="proc-desc">Hidráulica, elétrica, pintura, revestimentos. Entrega com vistoria técnica e termo de garantia.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="counter-card reveal reveal-delay-4">
+<!-- §03.4 COMPARAÇÃO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num reveal">§03.4 · Comparativo</div>
       <div>
-        <span class="counter-num" data-target="50" data-suffix="+">0</span>
-      </div>
-      <div class="counter-title">Anos de vida útil</div>
-      <div class="counter-desc">Norma ABNT NBR 15253 garante vida útil estrutural mínima de 50 anos. Com manutenção adequada, muito mais.</div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ══ COMPARATIVO ════════════════════════════════ -->
-<section class="comparativo">
-  <div class="comparativo-header reveal">
-    <div class="comparativo-label">Comparativo técnico</div>
-    <div class="comparativo-title">Steel Frame × Alvenaria Convencional</div>
-  </div>
-
-  <div class="comp-row reveal" data-bars>
-    <div class="comp-label-col">
-      <div class="comp-criterion">Prazo de obra</div>
-    </div>
-    <div class="comp-bars-col">
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Steel Frame</span>
-          <span class="bar-value">90 dias</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill sf" data-width="33"></div></div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Alvenaria</span>
-          <span class="bar-value">270+ dias</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill alv" data-width="100"></div></div>
+        <h2 class="sec-title reveal d1">Steel frame <em>vs.</em> alvenaria.</h2>
+        <p class="sec-sub reveal d2">Lado a lado — sem marketing, só número.</p>
       </div>
     </div>
-  </div>
-
-  <div class="comp-row reveal" data-bars>
-    <div class="comp-label-col">
-      <div class="comp-criterion">Resíduo gerado</div>
-    </div>
-    <div class="comp-bars-col">
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Steel Frame</span>
-          <span class="bar-value">~5%</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill sf" data-width="8"></div></div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Alvenaria</span>
-          <span class="bar-value">~30%</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill alv" data-width="48"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="comp-row reveal" data-bars>
-    <div class="comp-label-col">
-      <div class="comp-criterion">Precisão estrutural</div>
-    </div>
-    <div class="comp-bars-col">
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Steel Frame</span>
-          <span class="bar-value">±1mm</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill sf" data-width="98"></div></div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Alvenaria</span>
-          <span class="bar-value">±10mm</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill alv" data-width="40"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="comp-row reveal" data-bars>
-    <div class="comp-label-col">
-      <div class="comp-criterion">Vão livre máximo</div>
-    </div>
-    <div class="comp-bars-col">
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Steel Frame</span>
-          <span class="bar-value">10m</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill sf" data-width="100"></div></div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Alvenaria</span>
-          <span class="bar-value">4m</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill alv" data-width="40"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="comp-row reveal" data-bars>
-    <div class="comp-label-col">
-      <div class="comp-criterion">Peso da estrutura</div>
-    </div>
-    <div class="comp-bars-col">
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Steel Frame</span>
-          <span class="bar-value">~50 kg/m²</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill sf" data-width="20"></div></div>
-      </div>
-      <div class="bar-group">
-        <div class="bar-meta">
-          <span class="bar-name">Alvenaria</span>
-          <span class="bar-value">~300 kg/m²</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill alv" data-width="100"></div></div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
-<!-- ══ POR QUE LGM ═════════════════════════════════ -->
-<section class="porque">
-  <div class="porque-grid">
-    <div class="porque-left reveal">
-      <div class="porque-section-label">Por que escolher LGM</div>
-      <div class="porque-title">Projeto, execução e regularização — tudo sob uma única responsabilidade técnica.</div>
-    </div>
-    <div class="porque-right">
-      <div class="porque-item reveal reveal-delay-1">
-        <div class="porque-dot"></div>
-        <div class="porque-text">ART registrada no CREA–SP em todas as etapas</div>
-      </div>
-      <div class="porque-item reveal reveal-delay-2">
-        <div class="porque-dot"></div>
-        <div class="porque-text">CNO e INSS de obra regularizados sem burocracia</div>
-      </div>
-      <div class="porque-item reveal reveal-delay-3">
-        <div class="porque-dot"></div>
-        <div class="porque-text">70+ projetos entregues em todo o Brasil</div>
-      </div>
-      <div class="porque-item reveal reveal-delay-4">
-        <div class="porque-dot"></div>
-        <div class="porque-text">Atendimento nacional, execução em Marília–SP e região</div>
-      </div>
+    <div class="comp-table reveal d1">
+      <div class="comp-row head"><div>Critério</div><div>Steel Frame</div><div>Alvenaria</div></div>
+      <div class="comp-row"><div class="comp-cat">Prazo</div><div class="comp-sf">3 – 4 meses</div><div class="comp-alv">8 – 12 meses</div></div>
+      <div class="comp-row"><div class="comp-cat">Peso por m²</div><div class="comp-sf">≈ 60 kg/m²</div><div class="comp-alv">≈ 600 kg/m²</div></div>
+      <div class="comp-row"><div class="comp-cat">Desperdício</div><div class="comp-sf">&lt; 5 %</div><div class="comp-alv">15 – 30 %</div></div>
+      <div class="comp-row"><div class="comp-cat">Canteiro</div><div class="comp-sf">Seco · limpo</div><div class="comp-alv">Úmido · entulho</div></div>
+      <div class="comp-row"><div class="comp-cat">Isolamento</div><div class="comp-sf">Superior (lã mineral)</div><div class="comp-alv">Convencional</div></div>
+      <div class="comp-row"><div class="comp-cat">Precisão</div><div class="comp-sf">Milimétrica</div><div class="comp-alv">Centimétrica</div></div>
+      <div class="comp-row"><div class="comp-cat">Sustentabilidade</div><div class="comp-sf">100 % reciclável</div><div class="comp-alv">Alto impacto</div></div>
     </div>
   </div>
 </section>
 
-
-<!-- ══ CTA FINAL ════════════════════════════════════ -->
-<section class="cta-final">
-  <div class="cta-final-grid">
-    <div class="reveal">
-      <div class="cta-label">Vamos construir juntos</div>
-      <div class="cta-title">Quer construir com steel frame?</div>
-      <div class="cta-desc">Entre em contato agora e receba uma análise técnica gratuita do seu terreno e projeto. Atendo em todo o Brasil, com responsabilidade técnica completa — do projeto à entrega, com ART, CNO e INSS de obra regularizados.</div>
-    </div>
-    <div class="cta-buttons reveal reveal-delay-2">
-      <a href="https://wa.me/5514991850799?text=Olá%2C%20quero%20construir%20com%20Steel%20Frame%20e%20gostaria%20de%20um%20orçamento" target="_blank" class="btn-wa">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-        Falar no WhatsApp
-      </a>
-      <a href="index.html#orcamento" class="btn-secondary">Solicitar orçamento →</a>
-    </div>
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-tag reveal">§03 · próximo passo</div>
+    <h2 class="cta-title reveal d1">Pronto para <em>construir</em> melhor?</h2>
+    <a href="orcamento.html" class="cta-btn reveal d2">Solicitar orçamento</a>
   </div>
 </section>
 
-
-<!-- ══ FOOTER ════════════════════════════════════ -->
-<footer class="footer">
-  <div class="footer-logo">LGM</div>
-  <div class="footer-copy">© 2026 Luis Gustavo Maia · CREA–SP 5071068977 · Marília–SP</div>
-  <div class="footer-links">
-    <a href="index.html">Início</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="index.html#orcamento">Orçamento</a>
-    <a href="https://instagram.com/eng.gustavomaia" target="_blank">Instagram</a>
+<footer class="colophon">
+  <div class="col-inner">
+    <div>
+      <div class="col-logo">LGM <em>Engenharia</em></div>
+      <div class="col-meta">
+        Luis Gustavo Maia · CREA-SP 5071068977<br>
+        Marília/SP · (14) 99185-0799 · engmaia1996@gmail.com
+      </div>
+    </div>
+    <div class="col-rom">— Colophon · MMXXVI</div>
   </div>
 </footer>
 
-
-<!-- ══ WA FLOAT ══════════════════════════════════ -->
-<a href="https://wa.me/5514991850799?text=Olá%2C%20vim%20pela%20página%20de%20Steel%20Frame%20e%20quero%20um%20orçamento" target="_blank" class="wa-float">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.855L0 24l6.335-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.371l-.36-.213-3.76.896.955-3.665-.233-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-  <span>Falar no WhatsApp</span>
-</a>
-
+<a href="https://wa.me/5514991850799" target="_blank" class="wa-float" aria-label="WhatsApp">✉</a>
 
 <script>
-/* ── SCROLL REVEAL ── */
-var revealObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting) e.target.classList.add('visible');
-  });
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(function(el){ revealObs.observe(el); });
-
-/* ── COUNTER ANIMATION ── */
-function animateCounter(el){
-  var target = parseFloat(el.dataset.target);
-  var suffix = el.dataset.suffix || '';
-  var prefix = el.dataset.prefix || '';
-  var duration = 1400;
-  var start = null;
-  function step(ts){
-    if(!start) start = ts;
-    var progress = Math.min((ts - start) / duration, 1);
-    var ease = 1 - Math.pow(1 - progress, 3);
-    var current = Math.round(ease * target);
-    el.textContent = prefix + current + suffix;
-    if(progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-
-var counterObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting && !e.target.dataset.animated){
-      e.target.dataset.animated = '1';
-      animateCounter(e.target);
-    }
-  });
-},{threshold:0.3});
-document.querySelectorAll('.counter-num[data-target]').forEach(function(el){
-  counterObs.observe(el);
-});
-
-/* ── BAR ANIMATION ── */
-var barObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.bar-fill[data-width]').forEach(function(bar){
-        var w = bar.dataset.width;
-        bar.style.width = w + '%';
-      });
-    }
-  });
-},{threshold:0.2});
-document.querySelectorAll('.comp-row[data-bars]').forEach(function(row){
-  barObs.observe(row);
-});
+  const io = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
-
 </body>
 </html>

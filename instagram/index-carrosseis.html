@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kit Instagram · LGM Engenharia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0B0B0A;--ink2:#2A2A28;--ink3:#6C6C66;
+  --paper:#F4F1EC;--paper2:#E8E4DC;--terra:#8A6B4A;
+  --D:'Fraunces',Georgia,serif;--S:'Gill Sans MT','Century Gothic',sans-serif;
+  --B:'Inter',system-ui,sans-serif;--M:'JetBrains Mono',monospace;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--B);line-height:1.55;padding:60px clamp(20px,5vw,80px)}
+.wrap{max-width:1100px;margin:0 auto}
+.mast{border-bottom:1px solid var(--ink);padding-bottom:20px;margin-bottom:60px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
+.logo{font-family:var(--D);font-weight:300;font-size:28px}.logo em{font-style:italic;color:var(--terra)}
+.mast-meta{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);text-align:right;line-height:1.8}
+h1{font-family:var(--S);font-weight:200;font-size:clamp(56px,9vw,110px);line-height:.9;letter-spacing:-.03em;margin-bottom:30px}
+h1 em{font-family:var(--D);font-style:italic;color:var(--terra);font-weight:300}
+.lede{font-family:var(--D);font-weight:300;font-style:italic;font-size:22px;line-height:1.45;color:var(--ink2);max-width:700px;margin-bottom:80px}
+.sec{padding:40px 0;border-top:1px solid var(--paper2)}
+.sec-num{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:20px}
+.sec h2{font-family:var(--S);font-weight:200;font-size:clamp(34px,4vw,52px);line-height:1;letter-spacing:-.02em;margin-bottom:30px}
+.sec h2 em{font-family:var(--D);font-style:italic;color:var(--terra);font-weight:300}
+.card{border:1px solid var(--ink);padding:30px;margin-bottom:20px;display:grid;grid-template-columns:120px 1fr auto;gap:30px;align-items:center;transition:background .2s}
+.card:hover{background:var(--paper2)}
+@media(max-width:700px){.card{grid-template-columns:1fr}}
+.card .n{font-family:var(--D);font-style:italic;font-weight:300;font-size:60px;color:var(--terra);line-height:1}
+.card .body h3{font-family:var(--S);font-weight:300;font-size:26px;line-height:1.1;margin-bottom:8px}
+.card .body h3 em{font-family:var(--D);font-style:italic;color:var(--terra)}
+.card .body p{font-family:var(--D);font-weight:300;font-style:italic;font-size:17px;color:var(--ink3)}
+.card .body .meta{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:8px}
+.card .arr{font-family:var(--D);font-style:italic;font-size:22px;color:var(--terra);text-decoration:none}
+.card .arr a{color:var(--terra);text-decoration:none}
+.caption-block{background:var(--ink);color:var(--paper);padding:40px;margin-top:30px;font-family:var(--M);font-size:13px;line-height:1.75;white-space:pre-wrap;letter-spacing:.02em;border-left:3px solid var(--terra)}
+.caption-block .lbl{display:block;color:var(--terra);font-size:10px;letter-spacing:.22em;margin-bottom:16px}
+details{padding:18px 0;border-bottom:1px solid var(--paper2)}
+summary{cursor:pointer;font-family:var(--S);font-weight:300;font-size:22px;list-style:none;display:flex;justify-content:space-between;padding:6px 0}
+summary::after{content:'+';color:var(--terra);font-family:var(--D);font-size:28px}
+details[open] summary::after{content:'−'}
+.howto ol{font-family:var(--D);font-weight:300;font-size:18px;line-height:1.6;padding-left:30px;color:var(--ink2)}
+.howto ol li{margin-bottom:10px}
+.howto ol li strong{color:var(--terra);font-style:italic}
+.howto code{font-family:var(--M);font-size:13px;background:var(--paper2);padding:2px 8px;border-radius:3px}
+</style></head><body>
+<div class="wrap">
+
+<div class="mast">
+  <div class="logo">LGM <em>Engenharia</em></div>
+  <div class="mast-meta">Kit Instagram · MMXXVI<br>@eng.gustavomaia · v1.0</div>
+</div>
+
+<h1>Kit <em>Instagram.</em></h1>
+<p class="lede">— Três carrosséis editoriais + brand book + bio. Abra cada arquivo, capture cada slide (1080×1350), publique na ordem.</p>
+
+<section class="sec">
+  <div class="sec-num">§ 01 · Branding</div>
+  <h2>Manual <em>de marca.</em></h2>
+  <a href="branding.html" class="card" style="text-decoration:none;color:inherit">
+    <div class="n">00</div>
+    <div class="body">
+      <h3>Brand <em>book</em> completo</h3>
+      <p>— Paleta, tipografia, tom de voz, hashtags, bio, sistema de numeração editorial.</p>
+      <div class="meta">Sempre à mão · Referência</div>
+    </div>
+    <div class="arr">→</div>
+  </a>
+</section>
+
+<section class="sec">
+  <div class="sec-num">§ 02 · Carrosséis</div>
+  <h2>Três <em>edições.</em></h2>
+
+  <a href="carrossel-01-steelframe.html" class="card" style="text-decoration:none;color:inherit">
+    <div class="n">01</div>
+    <div class="body">
+      <h3>Steel frame <em>ou</em> alvenaria?</h3>
+      <p>— Comparativo técnico em 9 slides. Público: quem vai construir.</p>
+      <div class="meta">9 slides · Técnico · Alta retenção</div>
+    </div>
+    <div class="arr">→</div>
+  </a>
+
+  <a href="carrossel-02-perguntas.html" class="card" style="text-decoration:none;color:inherit">
+    <div class="n">02</div>
+    <div class="body">
+      <h3>Cinco perguntas <em>antes</em> da obra</h3>
+      <p>— Checklist de contratação. Público: cliente decidindo empreiteira.</p>
+      <div class="meta">7 slides · Educativo · Alto share</div>
+    </div>
+    <div class="arr">→</div>
+  </a>
+
+  <a href="carrossel-03-manifesto.html" class="card" style="text-decoration:none;color:inherit">
+    <div class="n">03</div>
+    <div class="body">
+      <h3>Manifesto · <em>engenharia lenta</em></h3>
+      <p>— Seis princípios de projeto. Público: quem se identifica com o método.</p>
+      <div class="meta">8 slides · Posicionamento · Branding puro</div>
+    </div>
+    <div class="arr">→</div>
+  </a>
+</section>
+
+<section class="sec">
+  <div class="sec-num">§ 03 · Como publicar</div>
+  <h2>Fluxo <em>de uso.</em></h2>
+  <div class="howto">
+    <ol>
+      <li>Abra o arquivo do carrossel no Chrome ou Edge.</li>
+      <li>Use a extensão <strong>GoFullPage</strong> ou o atalho <code>F12 → ⋮ → Capture node screenshot</code> sobre cada <code>.slide</code>. Cada slide exporta em <strong>1080×1350 px</strong>, pronto pro feed.</li>
+      <li>Alternativa simples: <strong>botão direito no slide → Imprimir → Salvar como PDF</strong>, depois fatiar no Canva.</li>
+      <li>Publique na ordem (capa → conteúdo → CTA). Cole a legenda da §04 abaixo.</li>
+      <li>Use sempre a <strong>mesma fonte no Reels</strong>: Gill Sans para título, Fraunces Italic para acento, JetBrains Mono para números.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-num">§ 04 · Legendas prontas</div>
+  <h2>Copy <em>pronta.</em></h2>
+
+  <details open>
+    <summary>Carrossel 01 · Steel frame vs alvenaria</summary>
+    <div class="caption-block"><span class="lbl">CAPTION · 01</span>Sete critérios. Zero marketing.
+
+A briga mais mal-informada da construção civil brasileira é sempre a mesma: "steel frame não é sério, casa de verdade é de tijolo".
+
+Neste carrossel, sete critérios técnicos comparados lado a lado — prazo, peso, desperdício, precisão, conforto, norma, custo.
+
+O veredito final cabe a você. Mas precisa caber com número, não com achismo.
+
+Salve pra não perder. Envie pra quem está construindo.
+
+— LGM · Eng. Luis Gustavo Maia · CREA-SP 5071068977
+— Marília/SP · (14) 99185-0799
+— brmaia96.github.io/lgm-apresentacao
+
+#LGMengenharia #steelFrameBrasil #engenhariaCivil #arquiteturaMarilia #construcaoSustentavel #calculoEstrutural #obraTecnica #engMarilia #lightSteelFrame #construcaoSeca</div>
+  </details>
+
+  <details>
+    <summary>Carrossel 02 · Cinco perguntas antes da obra</summary>
+    <div class="caption-block"><span class="lbl">CAPTION · 02</span>Cinco perguntas que ninguém faz — e depois custam caro.
+
+Antes de fechar qualquer contrato de obra, faça estas cinco perguntas. Se a resposta for silêncio ou "confia que vai dar certo", você já tem a sua resposta.
+
+I · Quem assina a ART?
+II · Existe cálculo estrutural?
+III · O cronograma é escrito?
+IV · Existe memorial descritivo?
+V · Quem fiscaliza a execução?
+
+Salve este post. Envie pra quem vai construir.
+
+— LGM · Eng. Luis Gustavo Maia · CREA-SP 5071068977
+— Marília/SP · (14) 99185-0799
+
+#LGMengenharia #engenhariaCivil #dicaDeObra #construirCasa #projetoArquitetonico #CREAsp #engMarilia #reformaDeCasa #planejamentoDeObra #engenhariaLenta</div>
+  </details>
+
+  <details>
+    <summary>Carrossel 03 · Manifesto · engenharia lenta</summary>
+    <div class="caption-block"><span class="lbl">CAPTION · 03</span>Manifesto.
+
+Seis princípios que norteiam cada projeto que eu assino.
+
+I · Projetar bem é construir menos vezes.
+II · Honestidade estrutural.
+III · Proporção vale mais que tamanho.
+IV · A luz é material de construção.
+V · O silêncio também projeta.
+VI · Obra lenta para casa rápida.
+
+Referências diretas: Mies, Paulo Mendes, Tadao Ando, Isay Weinfeld.
+
+Se isso faz sentido pra você, vamos começar pelo projeto.
+
+— LGM · Eng. Luis Gustavo Maia · CREA-SP 5071068977
+— Marília/SP · (14) 99185-0799
+
+#LGMengenharia #engenhariaLenta #arquiteturaBrasileira #projetoDeCasa #designDeInteriores #engenhariaEArquitetura #casaMinimalista #calculoEstrutural #engMarilia #slowArchitecture</div>
+  </details>
+</section>
+
+<section class="sec">
+  <div class="sec-num">§ 05 · Bio sugerida</div>
+  <h2>Perfil <em>@eng.gustavomaia</em></h2>
+  <div class="caption-block" style="white-space:normal"><span class="lbl">BIO · 150 CARACTERES</span>— Projeto, cálculo &amp; steel frame.<br>— CREA-SP 5071068977 · Marília/SP<br>— Projetar bem é construir menos vezes.<br>↓ Orçamento</div>
+</section>
+
+<div style="padding:60px 0 20px;font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);border-top:1px solid var(--ink);margin-top:60px">
+  Colophon · LGM Engenharia · MMXXVI · Marília/SP
+</div>
+</div></body></html>
