@@ -1,0 +1,125 @@
+/* LGM STORIES BASE — 1080×1920 (9:16) */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0B0B0A; --ink2:#2A2A28; --ink3:#6C6C66;
+  --paper:#F4F1EC; --paper2:#E8E4DC; --terra:#8A6B4A;
+  --D:'Fraunces',Georgia,serif;
+  --S:'Gill Sans MT','Century Gothic',sans-serif;
+  --B:'Inter',system-ui,sans-serif;
+  --M:'JetBrains Mono',monospace;
+}
+body{background:#1a1a19;font-family:var(--B);padding:40px 20px;min-height:100vh}
+.page-head{color:#888;font-family:var(--M);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:10px 0 30px}
+.page-head a{color:var(--terra);text-decoration:none}
+.gallery{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,auto);gap:40px;justify-content:center}
+@media(max-width:1200px){.gallery{grid-template-columns:1fr}}
+.story-wrap{display:flex;flex-direction:column;gap:14px;align-items:center}
+.story-tag{font-family:var(--M);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#aaa}
+.story-tag em{color:var(--terra);font-style:normal}
+
+/* STORY CANVAS — 1080×1920 */
+.st{width:540px;height:960px;background:var(--paper);color:var(--ink);position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45);transform-origin:top left}
+.st.dark{background:var(--ink);color:var(--paper)}
+.st.terra{background:var(--terra);color:var(--paper)}
+.st.p2{background:var(--paper2)}
+
+/* to see full res, multiply by 2: use .fullsize class */
+.st.fullsize{width:1080px;height:1920px}
+
+/* Top bar (simulates IG progress) */
+.st .ig-top{position:absolute;top:0;left:0;right:0;padding:20px 28px;display:flex;gap:4px;z-index:5}
+.st .ig-top .bar{flex:1;height:3px;background:rgba(255,255,255,.35);border-radius:2px}
+.st:not(.dark) .ig-top .bar{background:rgba(11,11,10,.2)}
+.st .ig-top .bar:first-child{background:rgba(255,255,255,.9)}
+.st:not(.dark) .ig-top .bar:first-child{background:var(--ink)}
+
+/* Header row */
+.st .head{position:absolute;top:38px;left:28px;right:28px;display:flex;justify-content:space-between;align-items:center;font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
+.st.dark .head{color:#888}
+.st .head .logo{font-family:var(--D);font-weight:300;font-size:16px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.st .head .logo em{font-style:italic;color:var(--terra)}
+.st.dark .head .logo{color:var(--paper)}
+.st.terra .head{color:rgba(255,255,255,.75)}
+.st.terra .head .logo{color:var(--paper)}
+
+/* Corners */
+.st .corners{position:absolute;inset:80px 40px 80px 40px;pointer-events:none;
+  background:
+    linear-gradient(var(--terra),var(--terra)) left top/14px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left top/1px 14px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right top/14px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right top/1px 14px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left bottom/14px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) left bottom/1px 14px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right bottom/14px 1px no-repeat,
+    linear-gradient(var(--terra),var(--terra)) right bottom/1px 14px no-repeat}
+.st.terra .corners{background:
+    linear-gradient(var(--paper),var(--paper)) left top/14px 1px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) left top/1px 14px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) right top/14px 1px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) right top/1px 14px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) left bottom/14px 1px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) left bottom/1px 14px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) right bottom/14px 1px no-repeat,
+    linear-gradient(var(--paper),var(--paper)) right bottom/1px 14px no-repeat}
+
+/* Grid bg */
+.st.dark .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--ink2) 1px,transparent 1px),linear-gradient(90deg,var(--ink2) 1px,transparent 1px);background-size:60px 60px;opacity:.28;pointer-events:none}
+
+/* Body */
+.st .body{position:absolute;inset:100px 55px 100px 55px;display:flex;flex-direction:column}
+
+.st .kicker{font-family:var(--M);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:18px}
+.st h1{font-family:var(--S);font-weight:200;font-size:72px;line-height:.95;letter-spacing:-.025em}
+.st h1 em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.st h2{font-family:var(--S);font-weight:200;font-size:54px;line-height:1;letter-spacing:-.02em}
+.st h2 em{font-family:var(--D);font-style:italic;font-weight:300;color:var(--terra)}
+.st .big-num{font-family:var(--S);font-weight:200;font-size:180px;line-height:.85;letter-spacing:-.04em;color:var(--terra)}
+.st .big-num em{font-family:var(--D);font-style:italic;font-weight:300}
+.st .quote{font-family:var(--D);font-weight:300;font-style:italic;font-size:36px;line-height:1.25;color:var(--ink)}
+.st.dark .quote{color:var(--paper)}
+.st .quote .mark{color:var(--terra);font-size:80px;line-height:1;display:block;margin-bottom:-10px}
+.st .quote-sig{font-family:var(--M);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:30px}
+.st.dark .quote-sig{color:#888}
+.st .body-t{font-family:var(--D);font-weight:300;font-size:22px;line-height:1.4;color:var(--ink2)}
+.st.dark .body-t{color:#C8C4BC}
+.st.terra .body-t{color:rgba(255,255,255,.9)}
+
+/* list */
+.st .list{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.st .list-item{display:grid;grid-template-columns:32px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid rgba(11,11,10,.1)}
+.st.dark .list-item{border-bottom-color:rgba(255,255,255,.1)}
+.st .list-num{font-family:var(--M);font-size:11px;letter-spacing:.16em;color:var(--terra);padding-top:6px}
+.st .list-title{font-family:var(--S);font-weight:300;font-size:26px;line-height:1.15}
+.st .list-title em{font-family:var(--D);font-style:italic;color:var(--terra)}
+
+/* CTA sticker */
+.st .cta{position:absolute;bottom:110px;left:55px;right:55px;padding:22px 24px;border:1.5px solid var(--terra);display:flex;justify-content:space-between;align-items:center;font-family:var(--M);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+.st.dark .cta{border-color:var(--terra);color:var(--terra)}
+.st.terra .cta{border-color:var(--paper);color:var(--paper)}
+.st .cta .arr{font-family:var(--D);font-size:20px;font-style:italic}
+
+/* footer sig */
+.st .sig{position:absolute;bottom:32px;left:55px;right:55px;font-family:var(--M);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);text-align:center}
+.st.dark .sig{color:#777}
+.st.terra .sig{color:rgba(255,255,255,.7)}
+
+/* tap hint */
+.st .tap{position:absolute;bottom:160px;right:55px;font-family:var(--D);font-style:italic;font-weight:300;font-size:18px;color:var(--terra);opacity:.9}
+
+/* before/after */
+.ba{position:absolute;inset:140px 40px 140px 40px;display:grid;grid-template-rows:1fr 1fr;gap:14px}
+.ba-half{background:var(--paper2);display:flex;flex-direction:column;justify-content:space-between;padding:28px 24px;position:relative;border-left:3px solid var(--terra)}
+.ba-half.b{background:var(--ink);color:var(--paper)}
+.ba-half .tag{font-family:var(--M);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+.ba-half .num{font-family:var(--S);font-weight:200;font-size:88px;line-height:.9;letter-spacing:-.03em}
+.ba-half .num em{font-family:var(--D);font-style:italic;color:var(--terra);font-weight:300}
+.ba-half .desc{font-family:var(--D);font-weight:300;font-size:18px;line-height:1.3;color:var(--ink3)}
+.ba-half.b .desc{color:#B4AFA5}
+
+/* answer box (Q&A) */
+.qa-q{background:rgba(255,255,255,.85);padding:24px;margin-top:20px;border-radius:14px;font-family:var(--B);font-size:17px;color:var(--ink);line-height:1.35}
+.qa-q .pfx{font-family:var(--M);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:8px;display:block}
+
+/* sticker label */
+.label{display:inline-block;padding:8px 14px;background:var(--terra);color:var(--paper);font-family:var(--M);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:30px}
