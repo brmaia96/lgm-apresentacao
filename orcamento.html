@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicite um orçamento com Luis Gustavo Maia, engenheiro civil CREA-SP 5071068977. Análise inicial gratuita. Atendimento nacional. Resposta em 24h.">
+  <title>Orçamento · LGM Engenharia</title>
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --ink:    #0D0D0D;
+      --ink2:   #3A3A3A;
+      --ink3:   #888880;
+      --paper:  #F6F4F0;
+      --paper2: #ECEAE5;
+      --white:  #FFFFFF;
+      --terra:  #7A6B5A;
+      --line:   rgba(13,13,13,0.10);
+      --D: 'Gill Sans MT','Gill Sans','Century Gothic',Calibri,sans-serif;
+      --B: 'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--B);
+      background: var(--paper);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── TOPBAR ─────────────────────────────────────────────── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(246,244,240,0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-logo {
+      font-family: var(--D);
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .topbar-nav a {
+      font-family: var(--B);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--ink2);
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .topbar-nav a:hover { color: var(--ink); }
+
+    .topbar-cta {
+      flex-shrink: 0;
+    }
+    .topbar-cta a {
+      display: inline-block;
+      font-family: var(--B);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--terra);
+      padding: 9px 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .topbar-cta a.active,
+    .topbar-cta a:hover {
+      background: var(--ink);
+      color: var(--white);
+    }
+    .topbar-cta a.active {
+      background: var(--terra);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    .hero {
+      background: var(--ink);
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      padding: 64px 40px;
+    }
+    .hero-inner {
+      max-width: 700px;
+    }
+    .hero-eyebrow {
+      font-family: var(--B);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: var(--D);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 200;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 20px;
+      white-space: pre-line;
+    }
+    .hero-sub {
+      font-family: var(--B);
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(246,244,240,0.55);
+      letter-spacing: 0.03em;
+    }
+    .hero-sub span {
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .hero-sub span + span::before {
+      content: '·';
+      margin-right: 8px;
+      opacity: 0.5;
+    }
+
+    /* ─── FORM SECTION ───────────────────────────────────────── */
+    .form-section {
+      background: var(--paper);
+      padding: 80px 40px;
+    }
+    .form-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    /* LEFT COLUMN */
+    .form-info-label {
+      font-family: var(--B);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 20px;
+    }
+    .form-info-title {
+      font-family: var(--D);
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 200;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .form-info-desc {
+      font-family: var(--B);
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink2);
+      margin-bottom: 32px;
+    }
+
+    .promise-list {
+      margin-bottom: 40px;
+    }
+    .promise-list li {
+      font-family: var(--B);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink2);
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .promise-list li::before {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--terra);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .contact-divider {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin-bottom: 28px;
+    }
+
+    .contact-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .contact-row-label {
+      font-family: var(--B);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      min-width: 90px;
+      padding-top: 2px;
+    }
+    .contact-row-value {
+      font-family: var(--B);
+      font-size: 14px;
+      color: var(--ink2);
+    }
+    .contact-row-value a {
+      color: var(--terra);
+      transition: color 0.2s;
+    }
+    .contact-row-value a:hover {
+      color: var(--ink);
+    }
+
+    /* RIGHT COLUMN — FORM CARD */
+    .form-card {
+      background: var(--white);
+      padding: 44px 40px;
+      border: 1px solid var(--line);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+    .form-group.no-mb { margin-bottom: 0; }
+
+    .form-group label {
+      font-family: var(--B);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--B);
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 0;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--ink3);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--terra);
+      box-shadow: 0 0 0 3px rgba(122,107,90,0.12);
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888880' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      font-family: var(--B);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--terra);
+      border: none;
+      padding: 16px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 24px;
+      margin-bottom: 14px;
+    }
+    .btn-submit:hover { background: var(--ink); }
+    .btn-submit:active { background: #5a4e40; }
+
+    .form-note {
+      font-family: var(--B);
+      font-size: 11px;
+      color: var(--ink3);
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+
+    .form-success {
+      display: none;
+      margin-top: 20px;
+      background: #f0ede8;
+      border-left: 3px solid var(--terra);
+      padding: 16px 18px;
+      font-family: var(--B);
+      font-size: 14px;
+      color: var(--ink2);
+      line-height: 1.5;
+    }
+    .form-success.visible { display: block; }
+
+    /* ─── CONTACT SECTION ────────────────────────────────────── */
+    .contact-section {
+      background: var(--ink);
+      padding: 80px 40px;
+    }
+    .contact-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    /* LEFT */
+    .contact-left {
+      padding-right: 64px;
+    }
+    .contact-lgm {
+      font-family: var(--D);
+      font-size: 80px;
+      font-weight: 200;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+    .contact-hr {
+      border: none;
+      border-top: 1px solid rgba(246,244,240,0.15);
+      margin-bottom: 28px;
+    }
+    .contact-creds {
+      font-family: var(--B);
+      font-size: 13px;
+      line-height: 1.85;
+      color: rgba(246,244,240,0.50);
+      letter-spacing: 0.02em;
+    }
+
+    /* RIGHT */
+    .contact-right {
+      padding-left: 64px;
+      border-left: 1px solid rgba(246,244,240,0.12);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-tagline {
+      font-family: var(--D);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 200;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 36px;
+      letter-spacing: 0.01em;
+    }
+    .contact-tagline .accent { color: var(--terra); }
+
+    .contact-detail-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contact-detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .contact-detail-label {
+      font-family: var(--B);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(246,244,240,0.35);
+      min-width: 100px;
+      padding-top: 2px;
+    }
+    .contact-detail-value {
+      font-family: var(--B);
+      font-size: 14px;
+      color: rgba(246,244,240,0.80);
+    }
+    .contact-detail-value a {
+      color: rgba(246,244,240,0.80);
+      transition: color 0.2s;
+    }
+    .contact-detail-value a:hover { color: var(--white); }
+
+    /* ─── WHATSAPP FLOAT ─────────────────────────────────────── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: var(--white);
+      padding: 14px 22px 14px 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .wa-float:hover {
+      background: #1ebe5d;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+      transform: translateY(-2px);
+    }
+    .wa-float svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+    .wa-float-text {
+      font-family: var(--B);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    /* ─── REVEAL ANIMATION ───────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── MOBILE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .form-section-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-section-inner {
+        grid-template-columns: 1fr;
+      }
+      .contact-left {
+        padding-right: 0;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(246,244,240,0.12);
+      }
+      .contact-right {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 48px;
+      }
+      .contact-lgm { font-size: 56px; }
+    }
+
+    @media (max-width: 700px) {
+      .topbar { padding: 0 20px; }
+      .topbar-nav { display: none; }
+
+      .hero { padding: 48px 20px; min-height: auto; }
+      .form-section { padding: 52px 20px; }
+      .form-section-inner { gap: 40px; }
+      .contact-section { padding: 56px 20px; }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+      }
+      .form-row .form-group {
+        margin-bottom: 16px;
+      }
+
+      .form-card { padding: 28px 20px; }
+
+      .wa-float-text { display: none; }
+      .wa-float { padding: 14px; border-radius: 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── TOPBAR ─────────────────────────────────────────────── -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">LGM</a>
+    <nav class="topbar-nav">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="steelframe.html">Steel Frame</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <div class="topbar-cta">
+      <a href="orcamento.html" class="active">Orçamento</a>
+    </div>
+  </header>
+
+  <!-- ─── HERO ───────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner reveal">
+      <p class="hero-eyebrow">Solicite seu orçamento</p>
+      <h1 class="hero-title">Conte sobre seu projeto.
+Respondo em 24h.</h1>
+      <p class="hero-sub">
+        <span>Análise inicial gratuita</span>
+        <span>Atendimento nacional</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── FORM SECTION ───────────────────────────────────────── -->
+  <section class="form-section">
+    <div class="form-section-inner">
+
+      <!-- LEFT INFO -->
+      <div class="form-info reveal">
+        <p class="form-info-label">Solicite seu orçamento</p>
+        <h2 class="form-info-title">Conte sobre seu projeto. Respondo em 24h.</h2>
+        <p class="form-info-desc">Preencha o formulário com as informações básicas do projeto. Sem compromisso — análise inicial gratuita.</p>
+
+        <ul class="promise-list">
+          <li>Análise gratuita do terreno e viabilidade</li>
+          <li>Orçamento detalhado por etapa de projeto</li>
+          <li>Atendimento em todo o Brasil</li>
+          <li>Resposta em até 24 horas úteis</li>
+        </ul>
+
+        <hr class="contact-divider">
+
+        <div class="contact-rows">
+          <div class="contact-row">
+            <span class="contact-row-label">WhatsApp</span>
+            <span class="contact-row-value">
+              <a href="https://wa.me/5514991850799" target="_blank" rel="noopener">(14) 99185-0799</a>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-row-label">E-mail</span>
+            <span class="contact-row-value">
+              <a href="mailto:engmaia1996@gmail.com">engmaia1996@gmail.com</a>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-row-label">Instagram</span>
+            <span class="contact-row-value">
+              <a href="https://instagram.com/eng.gustavomaia" target="_blank" rel="noopener">@eng.gustavomaia</a>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-row-label">CREA–SP</span>
+            <span class="contact-row-value">5071068977</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM CARD -->
+      <div class="form-card reveal">
+        <form id="orcamento-form" novalidate>
+
+          <div class="form-row">
+            <div class="form-group no-mb">
+              <label for="nome">Nome completo <span style="color:var(--terra)">*</span></label>
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            </div>
+            <div class="form-group no-mb">
+              <label for="whatsapp">WhatsApp <span style="color:var(--terra)">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(DDD) 9 0000-0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail <span style="color:var(--ink3);font-weight:400;text-transform:none;letter-spacing:0">(opcional)</span></label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="cidade">Cidade / Estado</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex: Marília – SP">
+          </div>
+
+          <div class="form-group">
+            <label for="servico">Serviço de interesse</label>
+            <select id="servico" name="servico">
+              <option value="" disabled selected>Selecione um serviço</option>
+              <option value="Projeto Arquitetônico + Estrutural">Projeto Arquitetônico + Estrutural</option>
+              <option value="Projeto Estrutural (Steel Frame)">Projeto Estrutural (Steel Frame)</option>
+              <option value="Projetos Complementares">Projetos Complementares</option>
+              <option value="CNO + INSS de Obra">CNO + INSS de Obra</option>
+              <option value="Documentação para Financiamento">Documentação para Financiamento</option>
+              <option value="Gestão de Obra">Gestão de Obra</option>
+              <option value="Pacote Completo (do projeto à chave)">Pacote Completo (do projeto à chave)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="area">Área aproximada</label>
+            <select id="area" name="area">
+              <option value="" disabled selected>Selecione uma faixa</option>
+              <option value="Até 80 m²">Até 80 m²</option>
+              <option value="80–120 m²">80–120 m²</option>
+              <option value="120–200 m²">120–200 m²</option>
+              <option value="200–350 m²">200–350 m²</option>
+              <option value="Acima de 350 m²">Acima de 350 m²</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem <span style="color:var(--ink3);font-weight:400;text-transform:none;letter-spacing:0">(opcional)</span></label>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte mais — terreno, prazo, dúvidas..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Solicitar Orçamento</button>
+          <p class="form-note">Seus dados não serão compartilhados com terceiros.</p>
+
+          <div class="form-success" id="form-success">
+            ✓ Mensagem recebida. Entro em contato em até 24 horas úteis.
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── CONTACT SECTION ───────────────────────────────────── -->
+  <section class="contact-section">
+    <div class="contact-section-inner">
+
+      <!-- LEFT -->
+      <div class="contact-left reveal">
+        <div class="contact-lgm">LGM</div>
+        <hr class="contact-hr">
+        <p class="contact-creds">
+          Luis Gustavo Maia<br>
+          Engenharia &amp; Construções<br>
+          CREA–SP 5071068977<br>
+          Marília–SP · Atendimento nacional
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact-right reveal">
+        <p class="contact-tagline">Do terreno. <span class="accent">À chave.</span></p>
+
+        <div class="contact-detail-rows">
+          <div class="contact-detail-row">
+            <span class="contact-detail-label">WhatsApp</span>
+            <span class="contact-detail-value">
+              <a href="https://wa.me/5514991850799" target="_blank" rel="noopener">(14) 99185–0799</a>
+            </span>
+          </div>
+          <div class="contact-detail-row">
+            <span class="contact-detail-label">E-mail</span>
+            <span class="contact-detail-value">
+              <a href="mailto:engmaia1996@gmail.com">engmaia1996@gmail.com</a>
+            </span>
+          </div>
+          <div class="contact-detail-row">
+            <span class="contact-detail-label">Instagram</span>
+            <span class="contact-detail-value">
+              <a href="https://instagram.com/eng.gustavomaia" target="_blank" rel="noopener">@eng.gustavomaia</a>
+            </span>
+          </div>
+          <div class="contact-detail-row">
+            <span class="contact-detail-label">CREA</span>
+            <span class="contact-detail-value">CREA–SP 5071068977</span>
+          </div>
+          <div class="contact-detail-row">
+            <span class="contact-detail-label">Localização</span>
+            <span class="contact-detail-value">Marília–SP · Brasil</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── WHATSAPP FLOAT ─────────────────────────────────────── -->
+  <a class="wa-float"
+     href="https://wa.me/5514991850799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento"
+     target="_blank"
+     rel="noopener"
+     aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-float-text">Falar no WhatsApp</span>
+  </a>
+
+  <!-- ─── SCRIPTS ────────────────────────────────────────────── -->
+  <script>
+    /* ── SCROLL REVEAL ─────────────────────────────────────── */
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    /* ── FORM SUBMIT ───────────────────────────────────────── */
+    document.getElementById('orcamento-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var nome      = (document.getElementById('nome').value      || '').trim();
+      var whatsapp  = (document.getElementById('whatsapp').value  || '').trim();
+      var email     = (document.getElementById('email').value     || '').trim();
+      var cidade    = (document.getElementById('cidade').value    || '').trim();
+      var servico   = (document.getElementById('servico').value   || '').trim();
+      var area      = (document.getElementById('area').value      || '').trim();
+      var mensagem  = (document.getElementById('mensagem').value  || '').trim();
+
+      // Basic validation
+      if (!nome || !whatsapp) {
+        alert('Por favor, preencha nome e WhatsApp.');
+        return;
+      }
+
+      // Build WA message
+      var lines = [];
+      lines.push('Olá, Luis Gustavo! Vim pelo site e gostaria de um orçamento.');
+      lines.push('');
+      lines.push('*Nome:* ' + nome);
+      lines.push('*WhatsApp:* ' + whatsapp);
+      if (email)   lines.push('*E-mail:* ' + email);
+      if (cidade)  lines.push('*Cidade/Estado:* ' + cidade);
+      if (servico) lines.push('*Serviço de interesse:* ' + servico);
+      if (area)    lines.push('*Área aproximada:* ' + area);
+      if (mensagem) {
+        lines.push('');
+        lines.push('*Mensagem:*');
+        lines.push(mensagem);
+      }
+
+      var text = lines.join('\n');
+      var url  = 'https://wa.me/5514991850799?text=' + encodeURIComponent(text);
+
+      // Show success
+      var successEl = document.getElementById('form-success');
+      successEl.classList.add('visible');
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Open WA after 800ms
+      setTimeout(function () {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }, 800);
+    });
+  </script>
+</body>
+</html>
